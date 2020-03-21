@@ -1,0 +1,6 @@
+E:\软件备份\FuckingERP\FuckingERP\Kzx.AppCore\obj\Debug\Kzx.AppCore.csproj.CoreCompileInputs.cache
+E:\软件备份\FuckingERP\FuckingERP\FuckingERP\bin\Debug\Kzx.AppCore.dll
+E:\软件备份\FuckingERP\FuckingERP\FuckingERP\bin\Debug\Kzx.AppCore.pdb
+E:\软件备份\FuckingERP\FuckingERP\Kzx.AppCore\obj\Debug\Kzx.AppCore.dll
+E:\软件备份\FuckingERP\FuckingERP\Kzx.AppCore\obj\Debug\Kzx.AppCore.pdb
+E:\软件备份\FuckingERP\FuckingERP\Kzx.AppCore\obj\Debug\Kzx.AppCore.csprojAssemblyReference.cache

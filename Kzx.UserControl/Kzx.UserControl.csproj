@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C163D1BC-3A38-4FC8-8D2E-42ECC1B5EE3B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kzx.UserControl</RootNamespace>
+    <AssemblyName>Kzx.UserControl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\FuckingERP\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.Charts.v13.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v13.2.Core, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.PivotGrid.v13.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.RichEdit.v13.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraBars.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2.Wizard, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraCharts.v13.2.Wizard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraEditors.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v13.2.Core, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraGauges.v13.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v13.2.Presets, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraGauges.v13.2.Presets.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v13.2.Win, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraGauges.v13.2.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraGrid.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraLayout.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraNavBar.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraPivotGrid.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraPrinting.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraReports.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2.Extensions, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraReports.v13.2.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraRichEdit.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraTreeList.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraVerticalGrid.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraWizard.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlEventArgs.cs" />
+    <Compile Include="ControlEventInfo.cs" />
+    <Compile Include="Extensions\GridViewExt.cs" />
+    <Compile Include="IControl.cs" />
+    <Compile Include="ILayoutControl.cs" />
+    <Compile Include="KzxBaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KzxBaseControl.Designer.cs">
+      <DependentUpon>KzxBaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="McDisplayName.cs" />
+    <Compile Include="McPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="McPropertyGrid.Designer.cs">
+      <DependentUpon>McPropertyGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="McPropertyTab.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Status.designer.cs">
+      <DependentUpon>Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatusSet.cs" />
+    <Compile Include="TextUiTypEdit.cs" />
+    <Compile Include="UITypeEdit\ControlEventInfoUiTypeEdit.cs" />
+    <Compile Include="UITypeEdit\frmDropDownButtonItemUiTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UITypeEdit\frmDropDownButtonItemUiTypeEdit.designer.cs">
+      <DependentUpon>frmDropDownButtonItemUiTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UITypeEdit\frmEventInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UITypeEdit\frmEventInfo.designer.cs">
+      <DependentUpon>frmEventInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UITypeEdit\frmGridControlColumnsUiTypeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UITypeEdit\frmGridControlColumnsUiTypeEditor.designer.cs">
+      <DependentUpon>frmGridControlColumnsUiTypeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UITypeEdit\frmLookUpEditUiTypeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UITypeEdit\frmLookUpEditUiTypeEditor.designer.cs">
+      <DependentUpon>frmLookUpEditUiTypeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UITypeEdit\frmTabPagesUITypeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UITypeEdit\frmTabPagesUITypeEditor.designer.cs">
+      <DependentUpon>frmTabPagesUITypeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UITypeEdit\frmTextUiTypeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UITypeEdit\frmTextUiTypeEditor.designer.cs">
+      <DependentUpon>frmTextUiTypeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UITypeEdit\frmKzxChartControlXColumnsUiTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UITypeEdit\frmKzxChartControlXColumnsUiTypeEdit.designer.cs">
+      <DependentUpon>frmKzxChartControlXColumnsUiTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UITypeEdit\TextUiTypEdit.cs" />
+    <Compile Include="UITypeEdit\ucKzxMaskType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UITypeEdit\ucKzxMaskType.designer.cs">
+      <DependentUpon>ucKzxMaskType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UITypeEdit\KzxChartControlXColumnsUiTypeEdit.cs" />
+    <Compile Include="UITypeEdit\KzxDropDownButtonItemUiTypeEdit.cs" />
+    <Compile Include="UITypeEdit\KzxGridControlColumnsUiTypeEdit.cs" />
+    <Compile Include="UITypeEdit\KzxLookUpEditUiTypeEdit.cs" />
+    <Compile Include="UITypeEdit\KzxMaskTypeUiTypeEdit.cs" />
+    <Compile Include="UITypeEdit\KzxTabPagesUiTypeEdit.cs" />
+    <Compile Include="KzxDropDownButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KzxLookUpEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KzxLookUpEdit.designer.cs">
+      <DependentUpon>KzxLookUpEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KzxLookUpEditListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KzxLookUpEditListBox.designer.cs">
+      <DependentUpon>KzxLookUpEditListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KzxPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KzxPanel.designer.cs">
+      <DependentUpon>KzxPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KzxGridDataFilterLocalConfig.cs" />
+    <Compile Include="KzxGridDataFilter.cs" />
+    <Compile Include="KzxGridDataFilterConfig.cs" />
+    <Compile Include="KzxGridDataFilterItem.cs" />
+    <Compile Include="KzxGridControlEvents.cs" />
+    <Compile Include="KzxSearchComboboxEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KzxSearchComboboxEdit.designer.cs">
+      <DependentUpon>KzxSearchComboboxEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KzxSearchLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KzxGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KzxTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KzxTabControl.designer.cs">
+      <DependentUpon>KzxTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KzxTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KzxTabPage.designer.cs">
+      <DependentUpon>KzxTabPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KzxTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KzxTextBox.designer.cs">
+      <DependentUpon>KzxTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KzxTreeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KzxTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KzxSimpleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KzxSimpleButton.Designer.cs">
+      <DependentUpon>KzxSimpleButton.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FuckingERP\FuckingERP.csproj">
+      <Project>{3A7B5FFB-9EC6-40AE-B03F-9E3A4EC4EBB7}</Project>
+      <Name>FuckingERP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kzx.AppCore\Kzx.AppCore.csproj">
+      <Project>{AA4EAB58-67C0-4027-A86B-817E30C62134}</Project>
+      <Name>Kzx.AppCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kzx.Common\Kzx.Common.csproj">
+      <Project>{976B448B-810D-4A79-A1CF-4872290E6994}</Project>
+      <Name>Kzx.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Status.resx">
+      <DependentUpon>Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UITypeEdit\frmDropDownButtonItemUiTypeEdit.resx">
+      <DependentUpon>frmDropDownButtonItemUiTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UITypeEdit\frmEventInfo.resx">
+      <DependentUpon>frmEventInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UITypeEdit\frmGridControlColumnsUiTypeEditor.resx">
+      <DependentUpon>frmGridControlColumnsUiTypeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UITypeEdit\frmLookUpEditUiTypeEditor.resx">
+      <DependentUpon>frmLookUpEditUiTypeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UITypeEdit\frmTabPagesUITypeEditor.resx">
+      <DependentUpon>frmTabPagesUITypeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UITypeEdit\frmTextUiTypeEditor.resx">
+      <DependentUpon>frmTextUiTypeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UITypeEdit\frmKzxChartControlXColumnsUiTypeEdit.resx">
+      <DependentUpon>frmKzxChartControlXColumnsUiTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UITypeEdit\ucKzxMaskType.resx">
+      <DependentUpon>ucKzxMaskType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KzxLookUpEdit.resx">
+      <DependentUpon>KzxLookUpEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KzxLookUpEditListBox.resx">
+      <DependentUpon>KzxLookUpEditListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KzxSearchComboboxEdit.resx">
+      <DependentUpon>KzxSearchComboboxEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KzxSearchLookUpEdit.resx">
+      <DependentUpon>KzxSearchLookUpEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KzxGridControl.resx">
+      <DependentUpon>KzxGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KzxTextBox.resx">
+      <DependentUpon>KzxTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
