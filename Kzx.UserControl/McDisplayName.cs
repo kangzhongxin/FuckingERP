@@ -122,14 +122,14 @@ namespace Kzx.UserControl
             try
             {
                 text = defaultMessage;
-                string filepath = System.IO.Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "YZCommon.dll");
+                string filepath = System.IO.Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "KzxCommon.dll");
                 Assembly assembly = null;
                 object obj = null;
 
                 Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
                 for (int i = 0; i < assemblies.Length; i++)
                 {
-                    if (assemblies[i].GetName().Name.Equals("YZCommon", StringComparison.OrdinalIgnoreCase) == true)
+                    if (assemblies[i].GetName().Name.Equals("KzxCommon", StringComparison.OrdinalIgnoreCase) == true)
                     {
                         assembly = assemblies[i];
                         break;
@@ -139,7 +139,7 @@ namespace Kzx.UserControl
                 {
                     assembly = Assembly.LoadFrom(filepath);
                 }
-                obj = assembly.CreateInstance("YZCommon.sysClass");
+                obj = assembly.CreateInstance("KzxCommon.sysClass");
                 text = defaultMessage;
                 if (_methodInfo == null)
                 {

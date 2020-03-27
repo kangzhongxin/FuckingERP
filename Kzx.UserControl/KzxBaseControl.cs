@@ -159,10 +159,8 @@ namespace Kzx.UserControl
                     {
                         this._Key = this.Table;
                     }
-                }
-                //add by huangyq20170526 控件的唯一标识带默认值，避免提交时出错
-                if (string.IsNullOrEmpty(this._Key)) return this.Name;
-                //end by huangyq20170526
+                } 
+                if (string.IsNullOrEmpty(this._Key)) return this.Name; 
 
                 return this._Key;
             }
@@ -821,7 +819,7 @@ namespace Kzx.UserControl
 
         private string toolTipMaxLengthText = string.Empty;
         /// <summary>
-        /// 数据长度不能超过数据库长度提示文本 add by huangyq20170519
+        /// 数据长度不能超过数据库长度提示文本 
         /// </summary>
         public virtual string ToolTipMaxLengthText
         {
@@ -936,24 +934,7 @@ namespace Kzx.UserControl
             {
                 //非空验证
                 if (string.IsNullOrWhiteSpace(this.GetValue() == null || this.GetValue() == DBNull.Value ? string.Empty : this.GetValue().ToString()) == true)
-                {
-                    //if (sender is DevExpress.XtraEditors.DateEdit)
-                    //{
-
-                    //}
-                    //else
-                    //{
-                    //    PropertyInfo pi = sender.GetType().GetProperty("Text");
-                    //    if (pi != null)
-                    //    {
-                    //        pi.SetValue(sender, string.Empty, null);
-                    //    }
-                    //    pi = sender.GetType().GetProperty("EditValue");
-                    //    if (pi != null)
-                    //    {
-                    //        pi.SetValue(sender, null, null);
-                    //    }
-                    //}
+                { 
                     SetErrorText(sender, GetLanguage("SYS001185", "数据不能为空"));
                     ret = 0;
                     return ret;
@@ -1278,40 +1259,7 @@ namespace Kzx.UserControl
                     }
                 }
             }
-            return;
-
-            if (this.BindingObject != null)
-            {
-                fieldname = this.BindingObject.BindingMemberInfo.BindingField;
-                if (this.BindingObject.DataSource is BindingSource)
-                {
-                    BindingSource bs = this.BindingObject.DataSource as BindingSource;
-                    if (bs != null)
-                    {
-                        rowview = (bs.Current) as DataRowView;
-                        if (rowview != null)
-                        {
-                            rowview.Row.SetColumnError(fieldname, string.Empty);
-                        }
-                    }
-                }
-                else if (this.BindingObject.BindingManagerBase.Current is DataRowView)
-                {
-                    rowview = this.BindingObject.BindingManagerBase.Current as DataRowView;
-                    if (rowview != null)
-                    {
-                        rowview.Row.SetColumnError(fieldname, string.Empty);
-                    }
-                }
-                else if (this.BindingObject.BindingManagerBase.Current is DataRow)
-                {
-                    DataRow row = this.BindingObject.BindingManagerBase.Current as DataRow;
-                    if (row != null)
-                    {
-                        row.SetColumnError(fieldname, string.Empty);
-                    }
-                }
-            }
+            return; 
         }
 
         public virtual void SetErrorText(object sender, string errorText)
@@ -1323,35 +1271,7 @@ namespace Kzx.UserControl
             {
                 pi.SetValue(sender, errorText, null);
             }
-            return;
-            if (this.BindingObject != null)
-            {
-                fieldname = this.BindingObject.BindingMemberInfo.BindingField;
-                if (this.BindingObject.DataSource is BindingSource)
-                {
-                    BindingSource bs = this.BindingObject.DataSource as BindingSource;
-                    if (bs.Current != null)
-                    {
-                        ((bs.Current) as DataRowView).Row.SetColumnError(fieldname, errorText);
-                    }
-                }
-                else if (this.BindingObject.BindingManagerBase.Current is DataRowView)
-                {
-                    DataRowView rowview = this.BindingObject.BindingManagerBase.Current as DataRowView;
-                    if (rowview != null)
-                    {
-                        rowview.Row.SetColumnError(fieldname, errorText);
-                    }
-                }
-                else if (this.BindingObject.BindingManagerBase.Current is DataRow)
-                {
-                    DataRow rowview = this.BindingObject.BindingManagerBase.Current as DataRow;
-                    if (rowview != null)
-                    {
-                        rowview.SetColumnError(fieldname, errorText);
-                    }
-                }
-            }
+            return; 
         }
 
         /// <summary>
@@ -1368,16 +1288,7 @@ namespace Kzx.UserControl
         /// <param name="valueControl">控件</param>
         /// <param name="eventInfoTable">事件信息表</param>
         public virtual void BindingEvent(Control valueControl, DataTable eventInfoTable)
-        {
-            //以下为表的格式
-            //dt.Columns.Add("uGuid1", typeof(string));    //Sys_FrmXml的uGuid1
-            //dt.Columns.Add("uGuid2", typeof(string));    //主键
-            //dt.Columns.Add("sFormName", typeof(string));    //窗口名称
-            //dt.Columns.Add("sKey", typeof(string));      //控件的Key属性
-            //dt.Columns.Add("sEventName", typeof(string));    //事件名称
-            //dt.Columns.Add("sFileName", typeof(string)); //插件的dll文件名
-            //dt.Columns.Add("sMark", typeof(string));    //备注
-
+        {  
             EventInfo ei = null;
             Type eventtype = null;
             Delegate handler = null;
@@ -1427,59 +1338,7 @@ namespace Kzx.UserControl
                                 }
                             }
                         }
-                    }
-
-                    //if (rows[i]["sEventName"].ToString().Equals("Click", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.Click -= new EventHandler(UserClick);
-                    //    valuecontrol.Click += new EventHandler(UserClick);
-                    //}
-                    //else if (rows[i]["sEventName"].ToString().Equals("DoubleClick", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.DoubleClick -= new EventHandler(UserDoubleClick);
-                    //    valuecontrol.DoubleClick += new EventHandler(UserDoubleClick);
-                    //}
-                    //else if (rows[i]["sEventName"].ToString().Equals("EditValueChanged", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-
-                    //}
-
-                    //else if (rows[i]["sEventName"].ToString().Equals("KeyDown", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.KeyDown -= new KeyEventHandler(UserKeyDown);
-                    //    valuecontrol.KeyDown += new KeyEventHandler(UserKeyDown);
-                    //}
-                    //else if (rows[i]["sEventName"].ToString().Equals("KeyPress", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.KeyPress -= new KeyPressEventHandler(UserKeyPress);
-                    //    valuecontrol.KeyPress += new KeyPressEventHandler(UserKeyPress);
-                    //}
-                    //else if (rows[i]["sEventName"].ToString().Equals("KeyUp", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.KeyUp -= new KeyEventHandler(UserKeyUp);
-                    //    valuecontrol.KeyUp += new KeyEventHandler(UserKeyUp);
-                    //}
-
-
-                    //else if (rows[i]["sEventName"].ToString().Equals("GotFocus", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.GotFocus -= new EventHandler(UserGotFocus);
-                    //    valuecontrol.GotFocus += new EventHandler(UserGotFocus);
-                    //}
-                    //else if (rows[i]["sEventName"].ToString().Equals("LostFocus", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.LostFocus -= new EventHandler(UserLostFocus);
-                    //    valuecontrol.LostFocus += new EventHandler(UserLostFocus);
-                    //}
-                    //else if (rows[i]["sEventName"].ToString().Equals("Validating", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.Validating -= new CancelEventHandler(UserValidating);
-                    //    valuecontrol.Validating += new CancelEventHandler(UserValidating);
-                    //}
-                    //else
-                    //{
-
-                    //}
+                    } 
                 }
             }
         }

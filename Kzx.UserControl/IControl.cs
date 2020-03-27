@@ -210,7 +210,7 @@ namespace Kzx.UserControl
         string ToolTipMessageCode { get; set; }
 
         /// <summary>
-        /// 数据长度不能超过数据库长度提示文本 add by huangyq20170519
+        /// 数据长度不能超过数据库长度提示文本  
         /// </summary>
         string ToolTipMaxLengthText { get; set; }
 

@@ -63,10 +63,8 @@ namespace Kzx.UserControl
         public virtual string Key
         {
             get
-            {
-                //add by huangyq20170526 控件的唯一标识带默认值，避免提交时出错
-                if (string.IsNullOrEmpty(this._Key)) return this.Name;
-                //end by huangyq20170526
+            { 
+                if (string.IsNullOrEmpty(this._Key)) return this.Name; 
 
                 return this._Key;
             }

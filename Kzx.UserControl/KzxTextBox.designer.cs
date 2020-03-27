@@ -55,14 +55,14 @@
             this.ValueControl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValueControl_KeyPress);
             this.ValueControl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ValueControl_MouseUp);
             // 
-            // YZTextBox
+            // KzxTextBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.Controls.Add(this.ValueControl);
             this.Controls.Add(this.CaptionControl);
-            this.Name = "YZTextBox";
+            this.Name = "KzxTextBox";
             this.Size = new System.Drawing.Size(284, 21);
-            this.Load += new System.EventHandler(this.YZTextBox_Load);
+            this.Load += new System.EventHandler(this.KzxTextBox_Load);
             this.SizeChanged += new System.EventHandler(this.SetSize);
             ((System.ComponentModel.ISupportInitialize)(this.ValueControl.Properties)).EndInit();
             this.ResumeLayout(false);

@@ -15,9 +15,7 @@ using Kzx.UserControl.UITypeEdit;
 namespace Kzx.UserControl
 {
     /// <summary>
-    /// 布局面板
-    /// 作者：米超
-    /// 时间：2014-6-7
+    /// 布局面板 
     /// </summary>
     public partial class KzxPanel : PanelControl, ILayoutControl
     {
@@ -31,10 +29,8 @@ namespace Kzx.UserControl
         public virtual string Key
         {
             get
-            {
-                //add by huangyq20170526 控件的唯一标识带默认值，避免提交时出错
-                if (string.IsNullOrEmpty(this._Key)) return this.Name;
-                //end by huangyq20170526
+            { 
+                if (string.IsNullOrEmpty(this._Key)) return this.Name; 
 
                 return this._Key;
             }
@@ -540,9 +536,9 @@ namespace Kzx.UserControl
             args.FieldName = string.Empty;
             args.TableName = string.Empty;
             args.Key = this.Key;
-            if (this.YZControlOperate != null)
+            if (this.KzxControlOperate != null)
             {
-                this.YZControlOperate(this, args);
+                this.KzxControlOperate(this, args);
                 e = args.SystemEventArgs;
             }
         }
@@ -639,13 +635,11 @@ namespace Kzx.UserControl
         /// <summary>
         /// 控件事件
         /// </summary>
-        public event KzxControlOperateEventHandler YZControlOperate;
+        public event KzxControlOperateEventHandler KzxControlOperate;
 
         /// <summary>
         /// 获取多语言文本事件
         /// </summary>
-        public event KzxGetLanguageEventHandler YZGetLanguage;
-        public event KzxControlOperateEventHandler KzxControlOperate;
-        public event KzxGetLanguageEventHandler KzxGetLanguage;
+        public event KzxGetLanguageEventHandler KzxGetLanguage; 
     }
 }

@@ -33,6 +33,7 @@ using Kzx.AppCore;
 using Kzx.Common;
 using Kzx.UserControl.UITypeEdit;
 using Kzx.UserControl.Extensions;
+using Kzx.UserControls;
 
 namespace Kzx.UserControl
 {
@@ -40,12 +41,8 @@ namespace Kzx.UserControl
     {
         /// <summary> 标识字符串常量集 </summary>
         private static class Identities
-        {
-            // ReSharper disable InconsistentNaming
-
-            public const string bChoose = nameof(bChoose);
-
-            // ReSharper restore InconsistentNaming
+        {  
+            public const string bChoose = nameof(bChoose); 
         }
 
         #region 字段
@@ -1364,7 +1361,7 @@ namespace Kzx.UserControl
 
         private string toolTipMaxLengthText = string.Empty;
         /// <summary>
-        /// 数据长度不能超过数据库长度提示文本 add by huangyq20170519
+        /// 数据长度不能超过数据库长度提示文本  
         /// </summary>
         public string ToolTipMaxLengthText
         {
@@ -4629,7 +4626,7 @@ namespace Kzx.UserControl
             for (int i = 0; i < doc.DocumentElement.ChildNodes.Count; i++)
             {
                 node = doc.DocumentElement.ChildNodes[i];
-                ////控制不可见的列不读取，提升渲染效率 add by huangyq20170620
+                ////控制不可见的列不读取，提升渲染效率  
                 //bool isVisible = false;
                 //if (node.Attributes["Visible"] != null)
                 //{

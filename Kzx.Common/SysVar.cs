@@ -20,7 +20,7 @@ namespace Kzx.Common
         public static DataSet dsSystemMSG = new DataSet(); //中文Msg数据集
         public static List<string> lstLoadFormsName = new List<string>();//预加载模块名称
         /// <summary>
-        /// 语言包数据字典,string:msgID,string:msgDesc (add by huangyq20170522：调整dataSet数据为数据字典 dictionary，提升查询效率)
+        /// 语言包数据字典,string:msgID,string:msgDesc  
         /// </summary>
         public static Dictionary<string, string> LanguageList = new Dictionary<string, string>();
 
@@ -67,7 +67,7 @@ namespace Kzx.Common
             public Boolean bAutoRefresh;//是否自动刷新，20161107，lfx
             public int iRefreshDuration;//刷新时长，20161107，lfx
             public DataSet dsListDataSet;//当前窗体数据列表所有数据集（包括分页后的所有页数据），lfx，20170502
-            public DialogResult dialogResult;//记录KzxCommonDialog所做的操作是【选择】或【取消】,OK 或 Cancel，add by zhang.jz 2019.01.17
+            public DialogResult dialogResult;//记录KzxCommonDialog所做的操作是【选择】或【取消】,OK 或 Cancel 
         }
         //当前窗体信息
         public static CurryFormInfo FCurryFormInfo;

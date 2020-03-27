@@ -36,6 +36,7 @@
       <HintPath>..\FuckingERP\bin\Debug\DevExpress.Charts.v13.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Design.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v13.2.Core, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\FuckingERP\bin\Debug\DevExpress.PivotGrid.v13.2.Core.dll</HintPath>
@@ -51,6 +52,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraBars.v13.2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.2.Design, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v13.2.Wizard, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraCharts.v13.2.Wizard.dll</HintPath>
@@ -59,6 +61,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraEditors.v13.2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.2.Design, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGauges.v13.2.Core, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraGauges.v13.2.Core.dll</HintPath>
@@ -115,8 +118,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\FuckingERP\bin\Debug\DevExpress.XtraWizard.v13.2.dll</HintPath>
     </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -294,8 +301,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Status.resx">
       <DependentUpon>Status.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UITypeEdit\frmDropDownButtonItemUiTypeEdit.resx">
       <DependentUpon>frmDropDownButtonItemUiTypeEdit.cs</DependentUpon>

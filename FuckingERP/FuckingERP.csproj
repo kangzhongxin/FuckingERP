@@ -207,6 +207,12 @@
     <Compile Include="frm_MainForm.Designer.cs">
       <DependentUpon>frm_MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_WorkFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_WorkFlow.Designer.cs">
+      <DependentUpon>frm_WorkFlow.cs</DependentUpon>
+    </Compile>
     <Compile Include="IniFile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_MainForm.resx">
       <DependentUpon>frm_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_WorkFlow.resx">
+      <DependentUpon>frm_WorkFlow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

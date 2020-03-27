@@ -38,8 +38,7 @@ namespace Kzx.UserControl
             this.CaptionControl.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.ValueControl.EditValueChanged -= new EventHandler(ValueControl_TextBoxEditChanged);
             this.ValueControl.EditValueChanged += new EventHandler(ValueControl_TextBoxEditChanged);
-            this.CaptionControl.SizeChanged += new EventHandler(SetSize);
-            //this.ValueControl.SizeChanged += new EventHandler(SetSize);
+            this.CaptionControl.SizeChanged += new EventHandler(SetSize); 
             if (this.DesignMode == true)
             {
                 this.Size = new Size(284, 21);
@@ -95,8 +94,8 @@ namespace Kzx.UserControl
         /// <summary>
         /// 边框显示格式
         /// </summary>
-        [Category("数据格式"), Description("YZBorderStyle,边框显示格式"), Browsable(true)]
-        [McDisplayName("YZBorderStyle")]
+        [Category("数据格式"), Description("KzxBorderStyle,边框显示格式"), Browsable(true)]
+        [McDisplayName("KzxBorderStyle")]
         public override DevExpress.XtraEditors.Controls.BorderStyles KzxBorderStyle
         {
             get
@@ -212,7 +211,7 @@ namespace Kzx.UserControl
 
         private string toolTipMaxLengthText = string.Empty;
         /// <summary>
-        /// 数据长度不能超过数据库长度提示文本 add by huangyq20170519
+        /// 数据长度不能超过数据库长度提示文本  
         /// </summary>
         public override string ToolTipMaxLengthText
         {
@@ -341,8 +340,8 @@ namespace Kzx.UserControl
         /// <summary>
         /// 格式掩码
         /// </summary>
-        [Category("数据格式"), Description("YZEditMask,掩码格式"), Browsable(true)]
-        [McDisplayName("YZEditMask")]
+        [Category("数据格式"), Description("KzxEditMask,掩码格式"), Browsable(true)]
+        [McDisplayName("KzxEditMask")]
         public virtual string KzxEditMask
         {
             get
@@ -358,8 +357,8 @@ namespace Kzx.UserControl
         /// <summary>
         /// 掩码验证类型
         /// </summary>
-        [Category("数据格式"), Description("YZMaskType,掩码验证类型"), Browsable(true), Editor(typeof(KzxMaskTypeUiTypeEdit), typeof(UITypeEditor))]
-        [McDisplayName("YZMaskType")]
+        [Category("数据格式"), Description("KzxMaskType,掩码验证类型"), Browsable(true), Editor(typeof(KzxMaskTypeUiTypeEdit), typeof(UITypeEditor))]
+        [McDisplayName("KzxMaskType")]
         public virtual string KzxMaskType
         {
             get
@@ -372,13 +371,13 @@ namespace Kzx.UserControl
             }
         }
 
-        private string _YZFormatString = string.Empty;
+        private string _KzxFormatString = string.Empty;
         /// <summary>
         /// 显示格式模式字符串(不验证录入)
         /// </summary>
-        [Category("数据格式"), Description("YZFormatString,显示模式字符串(不验证录入数据)"), Browsable(true)]
-        [McDisplayName("YZFormatString")]
-        public virtual string YZFormatString
+        [Category("数据格式"), Description("KzxFormatString,显示模式字符串(不验证录入数据)"), Browsable(true)]
+        [McDisplayName("KzxFormatString")]
+        public virtual string KzxFormatString
         {
             get
             {
@@ -386,18 +385,18 @@ namespace Kzx.UserControl
             }
             set
             {
-                this._YZFormatString = value;
+                this._KzxFormatString = value;
                 this.ContentControl.Properties.DisplayFormat.FormatString = value;
             }
         }
 
-        private DevExpress.Utils.FormatType _YZFormatType = DevExpress.Utils.FormatType.None;
+        private DevExpress.Utils.FormatType _KzxFormatType = DevExpress.Utils.FormatType.None;
         /// <summary>
         /// 显示格式模式类型(不验证录入数据)
         /// </summary>
-        [Category("数据格式"), Description("YZFormatType,显示格式模式类型(不验证录入数据)"), Browsable(true)]
-        [McDisplayName("YZFormatType")]
-        public virtual DevExpress.Utils.FormatType YZFormatType
+        [Category("数据格式"), Description("KzxFormatType,显示格式模式类型(不验证录入数据)"), Browsable(true)]
+        [McDisplayName("KzxFormatType")]
+        public virtual DevExpress.Utils.FormatType KzxFormatType
         {
             get
             {
@@ -405,7 +404,7 @@ namespace Kzx.UserControl
             }
             set
             {
-                this._YZFormatType = value;
+                this._KzxFormatType = value;
                 this.ContentControl.Properties.DisplayFormat.FormatType = value;
             }
         }
@@ -609,7 +608,7 @@ namespace Kzx.UserControl
             base.RaiseEvent(sender, "TextChanged", e);
         }
 
-        private void YZTextBox_Load(object sender, EventArgs e)
+        private void KzxTextBox_Load(object sender, EventArgs e)
         {
             LayoutControl();
             //UpdateDelegate d = LayoutControl;
@@ -688,8 +687,8 @@ namespace Kzx.UserControl
             this.ValueControl.Properties.ValidateOnEnterKey = true;
             //this.ValueControl.Height = this.Height;
             this.ValueControl.CausesValidation = false;
-            this.ValueControl.Properties.DisplayFormat.FormatType = this._YZFormatType;
-            this.ValueControl.Properties.DisplayFormat.FormatString = this._YZFormatString;
+            this.ValueControl.Properties.DisplayFormat.FormatType = this._KzxFormatType;
+            this.ValueControl.Properties.DisplayFormat.FormatString = this._KzxFormatString;
             this.ValueControl.Properties.BorderStyle = this._BorderStyle;
             if (this._BorderStyle == BorderStyles.NoBorder)
             {
@@ -758,7 +757,7 @@ namespace Kzx.UserControl
             RaiseEvent(sender, "Leave", e);
             if (this._Value.Equals((this.ValueControl.EditValue == null || this.ValueControl.EditValue == DBNull.Value ? string.Empty : this.ValueControl.EditValue.ToString())) == false)
             {
-                RaiseEvent(sender, "YZValueChanged", e);
+                RaiseEvent(sender, "KzxValueChanged", e);
                 this._Value = this.ValueControl.EditValue == null || this.ValueControl.EditValue == DBNull.Value ? string.Empty : this.ValueControl.EditValue.ToString();
             }
         }

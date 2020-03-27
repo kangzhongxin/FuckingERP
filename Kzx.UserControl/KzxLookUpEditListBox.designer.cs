@@ -54,12 +54,12 @@ namespace Kzx.UserControl
             this.ValueControl.QueryPopUp += new System.ComponentModel.CancelEventHandler(this.lookUpEdit_QueryPopUp);
             this.ValueControl.Closed += new DevExpress.XtraEditors.Controls.ClosedEventHandler(this.lookUpEdit_Closed);
             // 
-            // YZLookUpEditListBox
+            // KzxLookUpEditListBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.Controls.Add(this.ValueControl);
             this.Controls.Add(this.CaptionControl);
-            this.Name = "YZLookUpEditListBox";
+            this.Name = "KzxLookUpEditListBox";
             this.Size = new System.Drawing.Size(221, 21);
             this.Load += new System.EventHandler(this.KzxLookUpEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ValueControl.Properties)).EndInit();

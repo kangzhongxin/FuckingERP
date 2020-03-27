@@ -52,10 +52,8 @@ namespace Kzx.UserControl
         public virtual string Key
         {
             get
-            {
-                //add by huangyq20170526 控件的唯一标识带默认值，避免提交时出错
-                if (string.IsNullOrEmpty(this._Key)) return this.Name;
-                //end by huangyq20170526
+            { 
+                if (string.IsNullOrEmpty(this._Key)) return this.Name; 
 
                 return this._Key;
             }
@@ -314,23 +312,21 @@ namespace Kzx.UserControl
         /// 控件被加载后调用的方法
         /// 此方法在控件还原后被窗口调用
         /// </summary>
-        public virtual void YZControlLoaded()
+        public virtual void KzxControlLoaded()
         {
             //加载后事件
-            RaiseEvent(this, "YZControlLoaded", new EventArgs());
+            RaiseEvent(this, "KzxControlLoaded", new EventArgs());
         }
 
         /// <summary>
         /// 控件事件
         /// </summary>
-        public event KzxControlOperateEventHandler YZControlOperate;
+        public event KzxControlOperateEventHandler KzxControlOperate;
 
         /// <summary>
         /// 获取多语言文本事件
         /// </summary>
-        public event KzxGetLanguageEventHandler YZGetLanguage;
-        public event KzxControlOperateEventHandler KzxControlOperate;
-        public event KzxGetLanguageEventHandler KzxGetLanguage;
+        public event KzxGetLanguageEventHandler KzxGetLanguage; 
 
 
         #region 方法
@@ -410,9 +406,9 @@ namespace Kzx.UserControl
         /// <summary>
         /// 控钮类型
         /// </summary>
-        [Category("外观"), Description("YZButtonStyle,控钮类型"), Browsable(true)]
-        [McDisplayName("YZButtonStyle")] 
-        public DevExpress.XtraEditors.Controls.BorderStyles YZButtonStyle
+        [Category("外观"), Description("KzxButtonStyle,控钮类型"), Browsable(true)]
+        [McDisplayName("KzxButtonStyle")] 
+        public DevExpress.XtraEditors.Controls.BorderStyles KzxButtonStyle
         {
             get
             {
@@ -427,9 +423,9 @@ namespace Kzx.UserControl
         /// <summary>
         /// 按钮图片
         /// </summary>
-        [Category("外观"), Description("YZImage,按钮图片"), Browsable(true)]
-        [McDisplayName("YZImage")] 
-        public System.Drawing.Image YZImage
+        [Category("外观"), Description("KzxImage,按钮图片"), Browsable(true)]
+        [McDisplayName("KzxImage")] 
+        public System.Drawing.Image KzxImage
         {
             get
             {
@@ -444,9 +440,9 @@ namespace Kzx.UserControl
         /// <summary>
         /// 图片显示位置
         /// </summary>
-        [Category("外观"), Description("YZImageLocation,图片显示位置"), Browsable(true)]
-        [McDisplayName("YZImageLocation")] 
-        public DevExpress.XtraEditors.ImageLocation YZImageLocation
+        [Category("外观"), Description("KzxImageLocation,图片显示位置"), Browsable(true)]
+        [McDisplayName("KzxImageLocation")] 
+        public DevExpress.XtraEditors.ImageLocation KzxImageLocation
         {
             get
             {
@@ -644,9 +640,9 @@ namespace Kzx.UserControl
             args.FieldName = string.Empty;
             args.TableName = string.Empty;
             args.Key = this.Key;
-            if (this.YZControlOperate != null)
+            if (this.KzxControlOperate != null)
             {
-                this.YZControlOperate(this, args);
+                this.KzxControlOperate(this, args);
                 e = args.SystemEventArgs;
             }
         }
@@ -657,16 +653,7 @@ namespace Kzx.UserControl
         /// <param name="valueControl">控件</param>
         /// <param name="eventInfoTable">事件信息表</param>
         public virtual void BindingEvent(Control valueControl, DataTable eventInfoTable)
-        {
-            //以下为表的格式
-            //dt.Columns.Add("uGuid1", typeof(string));    //Sys_FrmXml的uGuid1
-            //dt.Columns.Add("uGuid2", typeof(string));    //主键
-            //dt.Columns.Add("sFormName", typeof(string));    //窗口名称
-            //dt.Columns.Add("sKey", typeof(string));      //控件的Key属性
-            //dt.Columns.Add("sEventName", typeof(string));    //事件名称
-            //dt.Columns.Add("sFileName", typeof(string)); //插件的dll文件名
-            //dt.Columns.Add("sMark", typeof(string));    //备注
-
+        {  
             EventInfo ei = null;
             Type eventtype = null;
             Delegate handler = null;
@@ -716,59 +703,7 @@ namespace Kzx.UserControl
                                 }
                             }
                         }
-                    }
-
-                    //if (rows[i]["sEventName"].ToString().Equals("Click", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.Click -= new EventHandler(UserClick);
-                    //    valuecontrol.Click += new EventHandler(UserClick);
-                    //}
-                    //else if (rows[i]["sEventName"].ToString().Equals("DoubleClick", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.DoubleClick -= new EventHandler(UserDoubleClick);
-                    //    valuecontrol.DoubleClick += new EventHandler(UserDoubleClick);
-                    //}
-                    //else if (rows[i]["sEventName"].ToString().Equals("EditValueChanged", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-
-                    //}
-
-                    //else if (rows[i]["sEventName"].ToString().Equals("KeyDown", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.KeyDown -= new KeyEventHandler(UserKeyDown);
-                    //    valuecontrol.KeyDown += new KeyEventHandler(UserKeyDown);
-                    //}
-                    //else if (rows[i]["sEventName"].ToString().Equals("KeyPress", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.KeyPress -= new KeyPressEventHandler(UserKeyPress);
-                    //    valuecontrol.KeyPress += new KeyPressEventHandler(UserKeyPress);
-                    //}
-                    //else if (rows[i]["sEventName"].ToString().Equals("KeyUp", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.KeyUp -= new KeyEventHandler(UserKeyUp);
-                    //    valuecontrol.KeyUp += new KeyEventHandler(UserKeyUp);
-                    //}
-
-
-                    //else if (rows[i]["sEventName"].ToString().Equals("GotFocus", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.GotFocus -= new EventHandler(UserGotFocus);
-                    //    valuecontrol.GotFocus += new EventHandler(UserGotFocus);
-                    //}
-                    //else if (rows[i]["sEventName"].ToString().Equals("LostFocus", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.LostFocus -= new EventHandler(UserLostFocus);
-                    //    valuecontrol.LostFocus += new EventHandler(UserLostFocus);
-                    //}
-                    //else if (rows[i]["sEventName"].ToString().Equals("Validating", StringComparison.OrdinalIgnoreCase) == true)
-                    //{
-                    //    valuecontrol.Validating -= new CancelEventHandler(UserValidating);
-                    //    valuecontrol.Validating += new CancelEventHandler(UserValidating);
-                    //}
-                    //else
-                    //{
-
-                    //}
+                    } 
                 }
             }
         }
@@ -802,7 +737,7 @@ namespace Kzx.UserControl
         /// <returns>取到的文本</returns>
         protected virtual string GetLanguage(string messageCode, string defaultMessage)
         {
-            string filepath = System.IO.Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "YZCommon.dll");
+            string filepath = System.IO.Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "KzxCommon.dll");
             string text = string.Empty;
             Assembly assembly = null;
             object obj = null;
@@ -810,7 +745,7 @@ namespace Kzx.UserControl
             Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
             for (int i = 0; i < assemblies.Length; i++)
             {
-                if (assemblies[i].GetName().Name.Equals("YZCommon", StringComparison.OrdinalIgnoreCase) == true)
+                if (assemblies[i].GetName().Name.Equals("KzxCommon", StringComparison.OrdinalIgnoreCase) == true)
                 {
                     assembly = assemblies[i];
                     break;
@@ -820,7 +755,7 @@ namespace Kzx.UserControl
             {
                 assembly = Assembly.LoadFrom(filepath);
             }
-            obj = assembly.CreateInstance("YZCommon.sysClass");
+            obj = assembly.CreateInstance("KzxCommon.sysClass");
             text = defaultMessage;
             if (_methodInfo == null)
             {
@@ -839,12 +774,7 @@ namespace Kzx.UserControl
             }
             return string.IsNullOrWhiteSpace(text) == true ? defaultMessage : text;
         }
-
-        public void KzxControlLoaded()
-        {
-            throw new NotImplementedException();
-        }
-
+         
 #if EVENT
         protected override void OnClick(EventArgs e)
         {

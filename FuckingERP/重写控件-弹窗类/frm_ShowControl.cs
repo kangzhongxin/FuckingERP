@@ -47,11 +47,15 @@ namespace FuckingERP.重写控件_弹窗类
             KzxMessageBox.Show("this is a test!");
             KzxMessageBox.Show("This is a test!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
         }
-
+        /// <summary>
+        /// 激活
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toolTipController1_GetActiveObjectInfo(object sender, DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs e)
         {
             KzxSimpleButton btn = e.SelectedControl as KzxSimpleButton;
-            e.Info = new DevExpress.Utils.ToolTipControlInfo(sender, btn.ToolTipText, DevExpress.Utils.ToolTipIconType.Information);
+            e.Info = new DevExpress.Utils.ToolTipControlInfo(sender,sysClass.ssLoadMsgOrDefault(btn.ToolTipMessageCode, btn.ToolTipText), DevExpress.Utils.ToolTipIconType.Information);
         }
     }
 }

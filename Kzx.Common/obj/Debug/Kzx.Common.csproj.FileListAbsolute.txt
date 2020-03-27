@@ -7,3 +7,12 @@ E:\软件备份\FuckingERP\FuckingERP\Kzx.Common\obj\Debug\Kzx.Common.csproj.Cop
 E:\软件备份\FuckingERP\FuckingERP\Kzx.Common\obj\Debug\Kzx.Common.dll
 E:\软件备份\FuckingERP\FuckingERP\Kzx.Common\obj\Debug\Kzx.Common.pdb
 E:\软件备份\FuckingERP\FuckingERP\Kzx.Common\obj\Debug\Kzx.Common.csprojAssemblyReference.cache
+E:\软件备份\FuckingERP_GIT\FuckingERP\bin\Debug\Kzx.Common.dll
+E:\软件备份\FuckingERP_GIT\FuckingERP\bin\Debug\Kzx.Common.pdb
+E:\软件备份\FuckingERP_GIT\Kzx.Common\obj\Debug\Kzx.Common.csprojAssemblyReference.cache
+E:\软件备份\FuckingERP_GIT\Kzx.Common\obj\Debug\Kzx.Common.frm_MessageBox.resources
+E:\软件备份\FuckingERP_GIT\Kzx.Common\obj\Debug\Kzx.Common.csproj.GenerateResource.cache
+E:\软件备份\FuckingERP_GIT\Kzx.Common\obj\Debug\Kzx.Common.csproj.CoreCompileInputs.cache
+E:\软件备份\FuckingERP_GIT\Kzx.Common\obj\Debug\Kzx.Common.csproj.CopyComplete
+E:\软件备份\FuckingERP_GIT\Kzx.Common\obj\Debug\Kzx.Common.dll
+E:\软件备份\FuckingERP_GIT\Kzx.Common\obj\Debug\Kzx.Common.pdb

@@ -25,6 +25,7 @@ using System.IO;
 using Kzx.UserControl.UITypeEdit;
 using Kzx.Common;
 using Kzx.AppCore;
+using Kzx.UserControls;
 
 namespace Kzx.UserControl
 {
@@ -162,7 +163,7 @@ namespace Kzx.UserControl
 
         private string toolTipMaxLengthText = string.Empty;
         /// <summary>
-        /// 数据长度不能超过数据库长度提示文本 add by huangyq20170519
+        /// 数据长度不能超过数据库长度提示文本 
         /// </summary>
         public string ToolTipMaxLengthText
         {

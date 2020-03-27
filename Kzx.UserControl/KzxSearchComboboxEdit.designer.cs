@@ -65,12 +65,12 @@ namespace Kzx.UserControl
             this._SearchLookUpEditView.OptionsView.ShowGroupPanel = false;
             this._SearchLookUpEditView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.searchLookUpEdit1View_RowClick);
             // 
-            // YZSearchComboboxEdit
+            // KzxSearchComboboxEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.Controls.Add(this.ValueControl);
             this.Controls.Add(this.CaptionControl);
-            this.Name = "YZSearchComboboxEdit";
+            this.Name = "KzxSearchComboboxEdit";
             this.Size = new System.Drawing.Size(221, 21);
             this.Load += new System.EventHandler(this.KzxLookUpEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ValueControl.Properties)).EndInit();

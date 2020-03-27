@@ -1,4 +1,6 @@
-﻿namespace Kzx.UserControl
+﻿using Kzx.UserControl;
+
+namespace Kzx.UserControls
 {
     partial class Status
     {
@@ -52,7 +54,7 @@
             this.repositoryItemCalcEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.ConfirmBt = new DevExpress.XtraEditors.SimpleButton();
             this.CancleBt = new DevExpress.XtraEditors.SimpleButton();
-            this.KzxPanel1 = new Kzx.UserControl.KzxPanel();
+            this.kzxPanel1 = new KzxPanel();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
@@ -64,8 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.KzxPanel1)).BeginInit();
-            this.KzxPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kzxPanel1)).BeginInit();
+            this.kzxPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -310,33 +312,33 @@
             this.CancleBt.Text = "取消";
             this.CancleBt.Click += new System.EventHandler(this.CancleBt_Click);
             // 
-            // KzxPanel1
+            // kzxPanel1
             // 
-            this.KzxPanel1.Controls.Add(this.ConfirmBt);
-            this.KzxPanel1.Controls.Add(this.CancleBt);
-            this.KzxPanel1.DesigeCaption = "显示标题";
-            this.KzxPanel1.DesigeEnabled = true;
-            this.KzxPanel1.DesigeVisible = true;
-            this.KzxPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.KzxPanel1.Key = "KzxPanel1";
-            this.KzxPanel1.LayoutColumn = 0;
-            this.KzxPanel1.LayoutColumnSpan = 1;
-            this.KzxPanel1.LayoutRow = 0;
-            this.KzxPanel1.LayoutRowSpan = 1;
-            this.KzxPanel1.Location = new System.Drawing.Point(0, 300);
-            this.KzxPanel1.MessageCode = "0";
-            this.KzxPanel1.Name = "KzxPanel1";
-            this.KzxPanel1.Size = new System.Drawing.Size(813, 46);
-            this.KzxPanel1.TabIndex = 3;
-            this.KzxPanel1.ToolTipMessageCode = "";
-            this.KzxPanel1.ToolTipText = "";
-            this.KzxPanel1.KzxBorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+            this.kzxPanel1.Controls.Add(this.ConfirmBt);
+            this.kzxPanel1.Controls.Add(this.CancleBt);
+            this.kzxPanel1.DesigeCaption = "显示标题";
+            this.kzxPanel1.DesigeEnabled = true;
+            this.kzxPanel1.DesigeVisible = true;
+            this.kzxPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kzxPanel1.Key = "kzxPanel1";
+            this.kzxPanel1.LayoutColumn = 0;
+            this.kzxPanel1.LayoutColumnSpan = 1;
+            this.kzxPanel1.LayoutRow = 0;
+            this.kzxPanel1.LayoutRowSpan = 1;
+            this.kzxPanel1.Location = new System.Drawing.Point(0, 300);
+            this.kzxPanel1.MessageCode = "0";
+            this.kzxPanel1.Name = "kzxPanel1";
+            this.kzxPanel1.Size = new System.Drawing.Size(813, 46);
+            this.kzxPanel1.TabIndex = 3;
+            this.kzxPanel1.ToolTipMessageCode = "";
+            this.kzxPanel1.ToolTipText = "";
+            this.kzxPanel1.KzxBorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
             // 
             // Status
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(813, 346);
-            this.Controls.Add(this.KzxPanel1);
+            this.Controls.Add(this.kzxPanel1);
             this.Controls.Add(this.gridControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MinimumSize = new System.Drawing.Size(513, 352);
@@ -354,8 +356,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.KzxPanel1)).EndInit();
-            this.KzxPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kzxPanel1)).EndInit();
+            this.kzxPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -373,7 +375,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private KzxPanel KzxPanel1;
+        private KzxPanel kzxPanel1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;

@@ -62,7 +62,7 @@ namespace Kzx.UserControl
 
         private string toolTipMaxLengthText = string.Empty;
         /// <summary>
-        /// 数据长度不能超过数据库长度提示文本 add by huangyq20170519
+        /// 数据长度不能超过数据库长度提示文本 
         /// </summary>
         public string ToolTipMaxLengthText
         {
@@ -881,9 +881,9 @@ namespace Kzx.UserControl
             args.FieldName = this.Field;
             args.TableName = this.Table;
             args.Key = this.Key;
-            if (this.YZControlOperate != null)
+            if (this.KzxControlOperate != null)
             {
-                this.YZControlOperate(this, args);
+                this.KzxControlOperate(this, args);
                 e = args.SystemEventArgs;
             }
         }
@@ -1250,22 +1250,16 @@ namespace Kzx.UserControl
         /// 控件被加载后调用的方法
         /// 此方法在控件还原后被窗口调用
         /// </summary>
-        public virtual void YZControlLoaded()
+        public virtual void KzxControlLoaded()
         {
             //加载后事件
-            RaiseEvent(this, "YZControlLoaded", new EventArgs());
+            RaiseEvent(this, "KzxControlLoaded", new EventArgs());
         }
+         
 
-        public void KzxControlLoaded()
-        {
-            throw new NotImplementedException();
-        }
-
-        public event KzxControlOperateEventHandler YZControlOperate;
-
-        public event KzxGetLanguageEventHandler YZGetLanguage;
         public event KzxControlOperateEventHandler KzxControlOperate;
-        public event KzxGetLanguageEventHandler KzxGetLanguage;
+
+        public event KzxGetLanguageEventHandler KzxGetLanguage; 
     }
 
     /// <summary>
@@ -1273,7 +1267,7 @@ namespace Kzx.UserControl
     /// </summary>
     internal class TreeViewHelper
     {
-        private KzxTreeView _YZTreeView;
+        private KzxTreeView _KzxTreeView;
 
         /// <summary>
         /// 构造
@@ -1281,7 +1275,7 @@ namespace Kzx.UserControl
         /// <param name="tv">树对象</param>
         public TreeViewHelper(KzxTreeView tv)
         {
-            this._YZTreeView = tv;
+            this._KzxTreeView = tv;
         }
 
         public void LoadData(object view)
@@ -1325,25 +1319,25 @@ namespace Kzx.UserControl
             TreeNode node = null;
             string pkey = string.Empty;
 
-            this._YZTreeView.Nodes.Clear();
+            this._KzxTreeView.Nodes.Clear();
             for (int i = 0; i < table.Rows.Count; i++)
             {
-                pkey = table.Rows[i][this._YZTreeView.ParentFieldName] == DBNull.Value || table.Rows[i][this._YZTreeView.ParentFieldName] == null ? string.Empty : table.Rows[i][this._YZTreeView.ParentFieldName].ToString();
-                rows = table.Select("Convert(ISNULL(" + this._YZTreeView.KeyFieldName + ",''),'System.String')='" + pkey + "'", string.Empty, DataViewRowState.CurrentRows);
+                pkey = table.Rows[i][this._KzxTreeView.ParentFieldName] == DBNull.Value || table.Rows[i][this._KzxTreeView.ParentFieldName] == null ? string.Empty : table.Rows[i][this._KzxTreeView.ParentFieldName].ToString();
+                rows = table.Select("Convert(ISNULL(" + this._KzxTreeView.KeyFieldName + ",''),'System.String')='" + pkey + "'", string.Empty, DataViewRowState.CurrentRows);
                 if (rows.Length <= 0)
                 {
                     list.Add(table.Rows[i]);
                 }
             }
 
-            //rows = table.Select("ISNULL(" + this._YZTreeView.ParentFieldName + ",'')=''", string.Empty, DataViewRowState.CurrentRows);
+            //rows = table.Select("ISNULL(" + this._KzxTreeView.ParentFieldName + ",'')=''", string.Empty, DataViewRowState.CurrentRows);
             for (int i = 0; i < list.Count; i++)
             {
                 row = list[i];
                 node = new TreeNode();
-                node.Text = row[this._YZTreeView.DisplayMemberPath] == DBNull.Value || row[this._YZTreeView.DisplayMemberPath] == null ? string.Empty : row[this._YZTreeView.DisplayMemberPath].ToString();
+                node.Text = row[this._KzxTreeView.DisplayMemberPath] == DBNull.Value || row[this._KzxTreeView.DisplayMemberPath] == null ? string.Empty : row[this._KzxTreeView.DisplayMemberPath].ToString();
                 node.Tag = row;
-                this._YZTreeView.Nodes.Add(node);
+                this._KzxTreeView.Nodes.Add(node);
                 OnLoadData(table, node, row);
             }
         }
@@ -1353,15 +1347,15 @@ namespace Kzx.UserControl
             DataRow row = null;
             DataRow[] rows = null;
             TreeNode node = null;
-            string pkey = parentRow[this._YZTreeView.KeyFieldName] == DBNull.Value || parentRow[this._YZTreeView.KeyFieldName] == null ? string.Empty : parentRow[this._YZTreeView.KeyFieldName].ToString();
+            string pkey = parentRow[this._KzxTreeView.KeyFieldName] == DBNull.Value || parentRow[this._KzxTreeView.KeyFieldName] == null ? string.Empty : parentRow[this._KzxTreeView.KeyFieldName].ToString();
             if (string.IsNullOrWhiteSpace(pkey) == false)
             {
-                rows = table.Select("Convert(ISNULL(" + this._YZTreeView.ParentFieldName + ",''),'System.String')='" + pkey + "'", string.Empty, DataViewRowState.CurrentRows);
+                rows = table.Select("Convert(ISNULL(" + this._KzxTreeView.ParentFieldName + ",''),'System.String')='" + pkey + "'", string.Empty, DataViewRowState.CurrentRows);
                 for (int i = 0; i < rows.Length; i++)
                 {
                     row = rows[i];
                     node = new TreeNode();
-                    node.Text = row[this._YZTreeView.DisplayMemberPath] == DBNull.Value || row[this._YZTreeView.DisplayMemberPath] == null ? string.Empty : row[this._YZTreeView.DisplayMemberPath].ToString();
+                    node.Text = row[this._KzxTreeView.DisplayMemberPath] == DBNull.Value || row[this._KzxTreeView.DisplayMemberPath] == null ? string.Empty : row[this._KzxTreeView.DisplayMemberPath].ToString();
                     node.Tag = row;
                     parentNode.Nodes.Add(node);
                     OnLoadData(table, node, row);
