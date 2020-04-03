@@ -36,14 +36,14 @@
             this.dockPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dockPanel1.Location = new System.Drawing.Point(0, 0);
             this.dockPanel1.Name = "dockPanel1";
-            this.dockPanel1.Size = new System.Drawing.Size(800, 450);
+            this.dockPanel1.Size = new System.Drawing.Size(1119, 582);
             this.dockPanel1.TabIndex = 0;
             // 
             // frmFuckingERP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1119, 582);
             this.Controls.Add(this.dockPanel1);
             this.IsMdiContainer = true;
             this.MaximizeBox = false;

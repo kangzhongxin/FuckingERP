@@ -57,5 +57,25 @@ namespace FuckingERP.重写控件_弹窗类
             KzxSimpleButton btn = e.SelectedControl as KzxSimpleButton;
             e.Info = new DevExpress.Utils.ToolTipControlInfo(sender,sysClass.ssLoadMsgOrDefault(btn.ToolTipMessageCode, btn.ToolTipText), DevExpress.Utils.ToolTipIconType.Information);
         }
+        /// <summary>
+        /// 数据初始化
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void frm_ShowControl_Load(object sender, EventArgs e)
+        { 
+            DataTable dataTable = new DataTable("Student"); 
+             
+            dataTable.Columns.Add("Name", typeof(String));
+            dataTable.Columns.Add("RealName", typeof(String)); 
+            dataTable.Rows.Add(new String[] {  "James", "张三" });
+            dataTable.Rows.Add(new String[] {  "Mary", "李四" });
+            dataTable.Rows.Add(new String[] { "Jack", "王五" });
+            dataTable.Rows.Add(new String[] { "joy", "赵六" });
+            dataTable.Rows.Add(new String[] {"jay", "钱七"});
+            dataTable.Rows.Add(new String[] { "stephen", "康忠鑫" });
+            kzxSearchComboboxEdit1.SetSourceTableBinding(dataTable.DefaultView, "RealName", "Name");
+            kzxGridControl1.DataSource = dataTable;
+        }
     }
 }

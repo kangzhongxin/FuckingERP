@@ -66,8 +66,8 @@ namespace Kzx.UserControl
         protected Binding BindingObject = null;
         private BandedGridView _bandedGridView = new BandedGridView();
         private KzxBandedGridView _KzxBandedGridView = null;
-        private List<int> lStartRow = new List<int>();//lfx,20170306 
-        private int EndRow = -1;//lfx,20170306 
+        private List<int> lStartRow = new List<int>(); 
+        private int EndRow = -1; 
         private Dictionary<string, string> _FooterCellDictionary = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Kzx.UserControl
         #region 事件
 
         /// <summary>
-        /// 网格状态确认设置回调 HHL modify 20170809
+        /// 网格状态确认设置回调  
         /// </summary>
         public event DelegaeOnThrowCheckFilterParam OnThrowCheckedFilteParam = null;
 
@@ -577,7 +577,7 @@ namespace Kzx.UserControl
             dc = StatusSet.dt.Columns.Add("sParent", Type.GetType("System.String"));
             dc = StatusSet.dt.Columns.Add("bSearchKeyField", Type.GetType("System.Boolean"));
             dc = StatusSet.dt.Columns.Add("sFieldDesc", Type.GetType("System.String"));
-            if (this.MainView != null)//20161226，lfx，解决网格状态列设置时，当前报表存在多层标题时this.gridView为空导致无法设置网格列状态
+            if (this.MainView != null)// 解决网格状态列设置时，当前报表存在多层标题时this.gridView为空导致无法设置网格列状态
             {
                 //读取INI文件保存的格式化字符串设置
                 string formatFilePath = Application.StartupPath + @"\Guid\StringFormat.ini";
@@ -621,7 +621,7 @@ namespace Kzx.UserControl
                             s = GetLanguage(rows[0]["MessageCode"].ToString(), rows[0]["DesigeCaption"].ToString());
                         }
 
-                        //管理工具中设置列不显示，lfx，20161226，不将此列添加到网格状态设置中
+                        //管理工具中设置列不显示， 不将此列添加到网格状态设置中
                         if (rows.Length > 0 && !Convert.ToBoolean(rows[0]["Visible"].ToString()))
                         {
                             continue;
@@ -677,7 +677,7 @@ namespace Kzx.UserControl
 
                 if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    //网格状态确认设置回调 HHL modify 20170809
+                    //网格状态确认设置回调  
                     List<CheckedFilterParam> filterParamList = new List<CheckedFilterParam>();
                     DataRow[] drParamList = StatusSet.dt.Select("bFilter = 'true'");
                     for (int i = 0; i < drParamList.Length; i++)
@@ -748,12 +748,7 @@ namespace Kzx.UserControl
                     }
                     int m = 0;
                     //读取INI文件保存的过滤设置(读取原来的INI信息)
-                    string ssContein = "";
-                    //string sFilterFile = Application.StartupPath + @"\Guid\bFilter.ini";
-                    //IniFile sbFilter = new IniFile(sFilterFile);
-                    //ssContein = sbFilter.IniReadValue("" + _ColorSet + this.Name + "", "Filter");
-                    //string sbBFilter = ssContein.Substring(0, ssContein.Length);
-                    //string[] ssCell = sbBFilter.Split(',');
+                    string ssContein = ""; 
                     bool ssFlag = false;
                     foreach (DataRow dr in StatusSet.dt.Rows)
                     {
@@ -776,26 +771,12 @@ namespace Kzx.UserControl
                         string sCaption = dr["sCaption"].ToString().Substring(0, dr["sCaption"].ToString().LastIndexOf("("));
                         sFileName = System.Text.RegularExpressions.Regex.Replace(@"" + dr["sCaption"].ToString() + "", @"(.*\()(.*)(\).*)", "$2");
 
-                        //var filterItem = new KzxGridDataFilterItem()
-                        //{
-                        //    FieldName = dr["sField"].ToString().Trim(),
-                        //    FieldDesc = sCaption,
-                        //    DataSetParentField = dr["sParent"].ToString(),
-                        //    IsDatabaseFilter = string.Equals(sSearchKeyFiled, "True", StringComparison.OrdinalIgnoreCase),
-                        //    IsDataSetFilter = string.Equals(sFilter, "True", StringComparison.OrdinalIgnoreCase),
-                        //};
-                        //filterConfig.Set(filterItem);
-
-                        //if (String.IsNullOrWhiteSpace(dr["bFilter"].ToString()) == false)
-                        //{
-                        //    lStringFilter.Add("|" + sFilter + "|" + sParent + "|" + sSearchKeyFiled);
-                        //    lStringCaption.Add(sFileName + "|" + sCaption);
-                        //}
+                     
                         if ((Boolean)dr["bSelect"])
                         {
 
                             ((GridView)this.MainView).Columns.ColumnByFieldName(dr["sField"].ToString().Trim()).Visible = true;
-                            //this.gridView.Columns.ColumnByFieldName(dr["sField"].ToString().Trim()).DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                         
                             if (string.IsNullOrWhiteSpace(dr["StringFormat"].ToString()) == false)
                             {
                                 Dictionary<string, string> dic = SetDisplayValue();
@@ -907,7 +888,7 @@ namespace Kzx.UserControl
                             {
                                 if (item.Children.Count > 0) //是否有下级Band  
                                 {
-                                    #region  存在子标题的情况下，分别对子标题的列的可见性进行网格状态设置，并根据子标题情况设置父标题显示状态。lfx，20161227
+                                    #region  存在子标题的情况下，分别对子标题的列的可见性进行网格状态设置，并根据子标题情况设置父标题显示状态。 
                                     bool flag = false;
                                     for (int i = 0; i < item.Children.Count; i++)
                                     {
@@ -932,11 +913,11 @@ namespace Kzx.UserControl
                                     item.Visible = item.Columns[0].Visible;
                                 }
                             }
-                            bandedView.SaveLayoutToXml(XmlFileName);//多层标题网格，列设置信息完成后将网格状态设置数据保存到xml文件，lfx，20161227
+                            bandedView.SaveLayoutToXml(XmlFileName);//多层标题网格，列设置信息完成后将网格状态设置数据保存到xml文件， 
                         }
                         else
                         {
-                            this.MainView.SaveLayoutToXml(XmlFileName);//非多层标题网格保存网格状态设置信息到xml文件，lfx，20161227
+                            this.MainView.SaveLayoutToXml(XmlFileName);//非多层标题网格保存网格状态设置信息到xml文件， 
                         }
                     }
                     catch (Exception)
@@ -1073,11 +1054,7 @@ namespace Kzx.UserControl
                         {
                             this.gridView.VisibleColumns[i].Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
                         }
-                    }
-                    //   if (int.Parse(sSum) < 1)
-                    //{
-                    //  this.gridView.VisibleColumns[].Fixed = DevExpress.XtraGrid.Columns.FixedStyle.None;
-                    // }
+                    } 
                 }
 
             }
@@ -1104,23 +1081,7 @@ namespace Kzx.UserControl
             gridView = gridView1;
 
             GetGridView(gridView);
-            //设置网格奇数行背景颜色为淡粉色，偶数行为白色
-            //this.gridView.Appearance.OddRow.BackColor = Color.AntiqueWhite;
-            //try
-            //{
-            //    this.gridView.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.GridColorA));
-            //    this.gridView.OptionsView.EnableAppearanceOddRow = true;
-            //    //this.gridView.Appearance.EvenRow.BackColor = Color.White;
-            //    this.gridView.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.GridColorB));
-            //    this.gridView.OptionsView.EnableAppearanceEvenRow = true;
-            //}
-            //catch
-            //{
-            //    this.gridView.Appearance.OddRow.BackColor = Color.AntiqueWhite;
-            //    this.gridView.OptionsView.EnableAppearanceOddRow = true;
-            //    this.gridView.Appearance.EvenRow.BackColor = Color.White;
-            //    this.gridView.OptionsView.EnableAppearanceEvenRow = true;
-            //}
+            
             string path = Application.StartupPath + @"\Guid";
             if (!Directory.Exists(path))
             {
@@ -1148,20 +1109,7 @@ namespace Kzx.UserControl
                             {
                                 this.gridView.Columns[sValue[0]].DisplayFormat.FormatString = "" + sValue[1] + "";
                             }
-                        }
-
-                        //for (int i = 0; i < sFname.Count; i++)
-                        //{
-                        //    if (dtColumn.Caption == this.gridView.Columns[sFname[i].ToString()].ToString())
-                        //    {
-                        //        string sFormat = sCell[i];
-                        //        if (string.IsNullOrWhiteSpace(sFormat)==false)
-                        //        {
-                        //            this.gridView.Columns[dtColumn.FieldName].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-                        //            this.gridView.Columns[dtColumn.FieldName].DisplayFormat.FormatString = "" + sFormat + "";
-                        //        }
-                        //    }
-                        //}
+                        } 
                     }
                 }
             }
@@ -2508,26 +2456,24 @@ namespace Kzx.UserControl
             this.CausesValidation = e;
         }
 
-        #region 复制行
-
-
+        #region 复制行 
         public void CopyLine(object sender, EventArgs e)
         {
             StringBuilder sqlsb = new StringBuilder();
             GridView gridview = this.MainView as GridView;
             DataTable dt = null;
             DataColumn[] columns = null;
-            BindingSource bs = null;
+            //BindingSource bs = null;
             DataRow row = null;
             DataRow rowtemp = null;
-
-            bs = (this.DataSource as BindingSource);
-            if (bs != null)
+            //举例是拿DataTable做数据源，所以下面代码暂时屏蔽
+            //bs = (this.DataSource as BindingSource);
+            if (this.DataSource != null)
             {
                 if (gridview.FocusedRowHandle >= 0)
                 {
                     row = gridview.GetDataRow(gridview.FocusedRowHandle);
-                    dt = (bs.List as DataView).Table;
+                    dt = ((this.DataSource as DataTable).DefaultView as DataView).Table;
                     if (dt.PrimaryKey != null)
                     {
                         columns = dt.PrimaryKey;
@@ -2595,7 +2541,7 @@ namespace Kzx.UserControl
             ToolStripItem item2;
             ToolStripItem item3;
             ToolStripItem item4;
-            ToolStripItem item5;//20170103,lfx,清除网格状态
+            ToolStripItem item5; 
 
             if (this.ContextMenuStrip == null)
             {
@@ -2606,13 +2552,13 @@ namespace Kzx.UserControl
 
             item = this._ContextMenuStrip.Items.Add(GetLanguage("MSG000688", "网格颜色设置"));//网格颜色设置
             item2 = this._ContextMenuStrip.Items.Add(GetLanguage("MSG000686", "网格状态设置"));//网格状态设置
-            item5 = this._ContextMenuStrip.Items.Add(GetLanguage("MSG006992", "清除网格状态"));//20170103,lfx,清除网格状态
+            item5 = this._ContextMenuStrip.Items.Add(GetLanguage("MSG006992", "清除网格状态")); 
 
 
             item.Click += new EventHandler(this.ColorSetMenuItem1_Click_1);
             item2.Click += new EventHandler(this.FormatMenuItem1_Click_2);
 
-            item5.Click += new EventHandler(this.ClearFormatMenuItem1_Click_3);//清除网格状态事件，lfx，20170103
+            item5.Click += new EventHandler(this.ClearFormatMenuItem1_Click_3);//清除网格状态事件 
 
             //如果需要显示右键复制行
             if (_displayRightClickCopyMenu)
@@ -2627,6 +2573,7 @@ namespace Kzx.UserControl
                 item4 = this._ContextMenuStrip.Items.Add(GetLanguage("SYS001196", "导出EXCEL"));//导出EXCEL
                 item4.Click += new EventHandler((s, ee) =>
                 { 
+                    //TODO:导出Excel动作
                 });
             }
             ToolSelectAll = this._ContextMenuStrip.Items.Add(GetLanguage("MSG000588", "全选"));//全选
@@ -2649,7 +2596,7 @@ namespace Kzx.UserControl
         }
 
         /// <summary>
-        /// 清除网格状态事件，lfx，20170103，如果是单据，则根据管理工具重新设置网格信息，如果是报表或者列表则网格将所有列设置为可将
+        /// 清除网格状态事件， 如果是单据，则根据管理工具重新设置网格信息，如果是报表或者列表则网格将所有列设置为可将
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -2741,7 +2688,7 @@ namespace Kzx.UserControl
                 _isChooseAllEvent = true;
                 GridView gv = (GridView)this.MainView;
 
-                //modify by huangyq20170526 调整全选逻辑，仅选择树节点向下的所有行
+                // 调整全选逻辑，仅选择树节点向下的所有行
                 GridColumnReadOnlyCollection columnCollections = gv.GroupedColumns;
                 if (columnCollections.Count == 0)
                 {
@@ -2857,7 +2804,7 @@ namespace Kzx.UserControl
             }
              
 
-            //删除所有已选行记录信息，lfx，20170306,设置结束行行号
+            //删除所有已选行记录信息， 设置结束行行号
             lStartRow.Clear();
             EndRow = -1;
              
@@ -2874,7 +2821,7 @@ namespace Kzx.UserControl
 
             var grid = (GridView)MainView;
 
-            //modify by huangyq20170526 调整全选逻辑，仅选择树节点向下的所有行
+            //  调整全选逻辑，仅选择树节点向下的所有行
             var columnCollections = grid.GroupedColumns;
             if (columnCollections.Count == 0)
             {
@@ -3235,7 +3182,7 @@ namespace Kzx.UserControl
         }
 
         /// <summary>
-        /// 鼠标按下事件,lfx,20170306
+        /// 鼠标按下事件 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -4466,7 +4413,7 @@ namespace Kzx.UserControl
             {
                 return;
             }
-            //记录选中的行，lfx，20170306
+            //记录选中的行 
             if (e.Column.FieldName == "bChoose" && !(Control.ModifierKeys == Keys.Shift))
             {
                 if (e.Value.GetType().ToString() == "System.Boolean")
@@ -5502,13 +5449,9 @@ namespace Kzx.UserControl
                         DevExpress.Data.SummaryItemType summaryitemtype = row["KzxSummaryItemType"] == DBNull.Value ? DevExpress.Data.SummaryItemType.None : XmlRow.KzxSummaryItemTypeConverter(row["KzxSummaryItemType"].ToString());
 
                         SetBackColor(gridColumn, isnull, isreadonly);
+                         
 
-                        //单据网格窗体汇总行要做权限控制，改为框架代码实现 HHL 20160809
-                        //GridColumnSummaryItem item = new DevExpress.XtraGrid.GridColumnSummaryItem(summaryitemtype);
-                        //item.FieldName = gridColumn.FieldName;
-                        //gridColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { item });
-
-                        #region -- 调整逻辑，优化性能 modify by huangyq 20170620 --
+                        #region -- 调整逻辑，优化性能 
                         {
                             string columnTypeString = dataRowView["ColumnType"].ToString();
                             ColumnType columnType = XmlRow.KzxColumnTypeConverter(columnTypeString);
@@ -6341,7 +6284,7 @@ namespace Kzx.UserControl
         }
     }
 
-    #region 列表报表网格状态设置回调 HHL modify 20170809
+    #region 列表报表网格状态设置回调  
     public class CheckedFilterParam
     {
         /// <summary>

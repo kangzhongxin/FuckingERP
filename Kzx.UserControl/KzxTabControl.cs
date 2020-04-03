@@ -19,9 +19,7 @@ using Kzx.UserControls;
 namespace Kzx.UserControl
 {
     /// <summary>
-    /// 页签控件
-    /// 作者：米超
-    /// 时间：2014-6-7
+    /// 页签控件 
     /// </summary>
     public partial class KzxTabControl : XtraTabControl, ILayoutControl
     {
