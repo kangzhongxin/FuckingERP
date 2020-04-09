@@ -93,3 +93,4 @@ E:\软件备份\FuckingERP_GIT\FuckingERP\obj\Debug\FuckingERP.csproj.CopyComple
 E:\软件备份\FuckingERP_GIT\FuckingERP\obj\Debug\FuckingERP.exe
 E:\软件备份\FuckingERP_GIT\FuckingERP\obj\Debug\FuckingERP.pdb
 E:\软件备份\FuckingERP_GIT\FuckingERP\obj\Debug\FuckingERP.frmWorkFlow.resources
+E:\软件备份\FuckingERP_GIT\FuckingERP\obj\Debug\FuckingERP.重写控件_弹窗类.frm_GridSetting.resources

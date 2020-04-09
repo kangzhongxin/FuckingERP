@@ -30,8 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ShowControl));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.kzxSimpleButton2 = new Kzx.UserControl.KzxSimpleButton();
             this.kzxSearchComboboxEdit1 = new Kzx.UserControl.KzxSearchComboboxEdit();
             this.kzxTextBox1 = new Kzx.UserControl.KzxTextBox();
             this.kzxSimpleButton1 = new Kzx.UserControl.KzxSimpleButton();
@@ -50,6 +52,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.kzxSimpleButton2);
             this.groupControl1.Controls.Add(this.kzxSearchComboboxEdit1);
             this.groupControl1.Controls.Add(this.kzxTextBox1);
             this.groupControl1.Controls.Add(this.kzxSimpleButton1);
@@ -59,6 +62,31 @@
             this.groupControl1.Size = new System.Drawing.Size(800, 81);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "自定义控件测试";
+            // 
+            // kzxSimpleButton2
+            // 
+            this.kzxSimpleButton2.DesigeCaption = "网格状态设置";
+            this.kzxSimpleButton2.DesigeEnabled = true;
+            this.kzxSimpleButton2.DesigeVisible = true;
+            this.kzxSimpleButton2.DllName = "";
+            this.kzxSimpleButton2.Key = "kzxSimpleButton2";
+            this.kzxSimpleButton2.KzxButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+            this.kzxSimpleButton2.KzxImage = null;
+            this.kzxSimpleButton2.KzxImageLocation = DevExpress.XtraEditors.ImageLocation.Default;
+            this.kzxSimpleButton2.LabelForeColor = System.Drawing.Color.Empty;
+            this.kzxSimpleButton2.LayoutColumn = 0;
+            this.kzxSimpleButton2.LayoutColumnSpan = 1;
+            this.kzxSimpleButton2.LayoutRow = 0;
+            this.kzxSimpleButton2.LayoutRowSpan = 1;
+            this.kzxSimpleButton2.Location = new System.Drawing.Point(678, 37);
+            this.kzxSimpleButton2.MessageCode = "0";
+            this.kzxSimpleButton2.Name = "kzxSimpleButton2";
+            this.kzxSimpleButton2.Size = new System.Drawing.Size(92, 23);
+            this.kzxSimpleButton2.TabIndex = 4;
+            this.kzxSimpleButton2.Text = "网格状态设置";
+            this.kzxSimpleButton2.ToolTipMessageCode = "";
+            this.kzxSimpleButton2.ToolTipText = "";
+            this.kzxSimpleButton2.Click += new System.EventHandler(this.kzxSimpleButton2_Click);
             // 
             // kzxSearchComboboxEdit1
             // 
@@ -243,6 +271,9 @@
             this.kzxGridControl1.LayoutColumnSpan = 1;
             this.kzxGridControl1.LayoutRow = 0;
             this.kzxGridControl1.LayoutRowSpan = 1;
+            gridLevelNode1.RelationName = "Level1";
+            this.kzxGridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
             this.kzxGridControl1.Location = new System.Drawing.Point(0, 81);
             this.kzxGridControl1.MaxValue = "";
             this.kzxGridControl1.MessageCode = "0";
@@ -289,7 +320,8 @@
         private Kzx.UserControl.KzxSimpleButton kzxSimpleButton1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private Kzx.UserControl.KzxTextBox kzxTextBox1;
-        private Kzx.UserControl.KzxSearchComboboxEdit kzxSearchComboboxEdit1;
         private Kzx.UserControl.KzxGridControl kzxGridControl1;
+        private Kzx.UserControl.KzxSearchComboboxEdit kzxSearchComboboxEdit1;
+        private Kzx.UserControl.KzxSimpleButton kzxSimpleButton2;
     }
 }

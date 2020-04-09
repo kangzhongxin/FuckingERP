@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mes>
+  <Columns ColumnsName="UserName">
+    <isDisplay>True</isDisplay>
+    <Freeze>无</Freeze>
+    <ColumnsWidth>120</ColumnsWidth>
+    <iOrder>0</iOrder>
+  </Columns>
+  <Columns ColumnsName="RealName">
+    <isDisplay>True</isDisplay>
+    <Freeze>无</Freeze>
+    <ColumnsWidth>120</ColumnsWidth>
+    <iOrder>1</iOrder>
+  </Columns>
+  <Columns ColumnsName="Blogs">
+    <isDisplay>True</isDisplay>
+    <Freeze>无</Freeze>
+    <ColumnsWidth>120</ColumnsWidth>
+    <iOrder>2</iOrder>
+  </Columns>
+  <Columns ColumnsName="motto">
+    <isDisplay>True</isDisplay>
+    <Freeze>无</Freeze>
+    <ColumnsWidth>120</ColumnsWidth>
+    <iOrder>3</iOrder>
+  </Columns>
+  <Columns ColumnsName="Name">
+    <isDisplay>True</isDisplay>
+    <Freeze>无</Freeze>
+    <ColumnsWidth>120</ColumnsWidth>
+    <iOrder>4</iOrder>
+  </Columns>
+  <Columns ColumnsName="Number">
+    <isDisplay>True</isDisplay>
+    <Freeze>无</Freeze>
+    <ColumnsWidth>120</ColumnsWidth>
+    <iOrder>5</iOrder>
+  </Columns>
+  <Columns ColumnsName="Address">
+    <isDisplay>True</isDisplay>
+    <Freeze>无</Freeze>
+    <ColumnsWidth>120</ColumnsWidth>
+    <iOrder>6</iOrder>
+  </Columns>
+  <Columns ColumnsName="TelePhone">
+    <isDisplay>True</isDisplay>
+    <Freeze>无</Freeze>
+    <ColumnsWidth>120</ColumnsWidth>
+    <iOrder>7</iOrder>
+  </Columns>
+  <Columns ColumnsName="Email">
+    <isDisplay>True</isDisplay>
+    <Freeze>无</Freeze>
+    <ColumnsWidth>120</ColumnsWidth>
+    <iOrder>8</iOrder>
+  </Columns>
+</Mes>
