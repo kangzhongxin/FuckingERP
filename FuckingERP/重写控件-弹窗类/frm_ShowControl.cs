@@ -59,7 +59,7 @@ namespace FuckingERP.重写控件_弹窗类
         private void toolTipController1_GetActiveObjectInfo(object sender, DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs e)
         {
             KzxSimpleButton btn = e.SelectedControl as KzxSimpleButton;
-            e.Info = new DevExpress.Utils.ToolTipControlInfo(sender,sysClass.ssLoadMsgOrDefault(btn.ToolTipMessageCode, btn.ToolTipText), DevExpress.Utils.ToolTipIconType.Information);
+            e.Info = new DevExpress.Utils.ToolTipControlInfo(sender, sysClass.ssLoadMsgOrDefault(btn.ToolTipMessageCode, btn.ToolTipText), DevExpress.Utils.ToolTipIconType.Information);
         }
         /// <summary>
         /// 数据初始化
@@ -68,7 +68,7 @@ namespace FuckingERP.重写控件_弹窗类
         /// <param name="e"></param>
         private void frm_ShowControl_Load(object sender, EventArgs e)
         {
-            DataTable dataTable = new DataTable("Student"); 
+            DataTable dataTable = new DataTable("Student");
             dataTable.Columns.Add("Number", typeof(String));
             dataTable.Columns.Add("Name", typeof(String));
             dataTable.Columns.Add("RealName", typeof(String));
@@ -78,15 +78,14 @@ namespace FuckingERP.重写控件_弹窗类
             dataTable.Columns.Add("Email", typeof(String));
             dataTable.Columns.Add("Blogs", typeof(String));
             dataTable.Columns.Add("motto", typeof(String));
-            dataTable.Rows.Add(new String[] { "1", "James", "张三", "james.zhang", "长沙","1111111111","123@qq.com", "https://kangzhongxin.github.io","追求卓越，成功会在不经意间追上你！" });
+            dataTable.Rows.Add(new String[] { "1", "James", "张三", "james.zhang", "长沙", "1111111111", "123@qq.com", "https://kangzhongxin.github.io", "追求卓越，成功会在不经意间追上你！" });
             dataTable.Rows.Add(new String[] { "2", "Mary", "李四", "mary.xu", "山东", "1111111111", "123@qq.com", "https://kangzhongxin.github.io", "追求卓越，成功会在不经意间追上你！" });
             dataTable.Rows.Add(new String[] { "3", "Jack", "王五", "jack.li", "台湾", "1111111111", "123@qq.com", "https://kangzhongxin.github.io", "追求卓越，成功会在不经意间追上你！" });
             dataTable.Rows.Add(new String[] { "4", "joy", "赵六", "joy.zhou", "济南", "1111111111", "123@qq.com", "https://kangzhongxin.github.io", "追求卓越，成功会在不经意间追上你！" });
             dataTable.Rows.Add(new String[] { "5", "jay", "钱七", "jay.ji", "美国", "1111111111", "123@qq.com", "https://kangzhongxin.github.io", "追求卓越，成功会在不经意间追上你！" });
             dataTable.Rows.Add(new String[] { "6", "stephen", "康忠鑫", "Stephen.Kang", "深圳", "1111111111", "123@qq.com", "https://kangzhongxin.github.io", "追求卓越，成功会在不经意间追上你！" });
-            kzxSearchComboboxEdit1.SetSourceTableBinding(dataTable.DefaultView, "RealName", "Name");
+            //kzxSearchComboboxEdit1.SetSourceTableBinding(dataTable.DefaultView, "RealName", "Name");
             kzxGridControl1.DataSource = dataTable;
-
             GridView gv = this.kzxGridControl1.MainView as GridView;
             //读取配置文件，更新网格状态
             string sPath = $@"{ Application.StartupPath}\Task.xml";
@@ -121,7 +120,7 @@ namespace FuckingERP.重写控件_弹窗类
                             gv.Columns[i].Fixed = FixedStyle.Right;
                         }
                         if (!Boolean.Parse(query.isDisplay))
-                        { 
+                        {
                             gv.Columns[i].VisibleIndex = -1;
                             gv.Columns[i].Visible = Boolean.Parse(query.isDisplay);
                         }
@@ -129,7 +128,7 @@ namespace FuckingERP.重写控件_弹窗类
                         {
                             gv.Columns[i].VisibleIndex = int.Parse(query.iOrder);
                         }
-                        gv.Columns[i].Width = int.Parse(query.ColumnsWidth); 
+                        gv.Columns[i].Width = int.Parse(query.ColumnsWidth);
                     }
                 }
             }
