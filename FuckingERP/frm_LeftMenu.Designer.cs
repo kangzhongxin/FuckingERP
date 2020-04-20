@@ -33,19 +33,23 @@
             this.nbShowControl = new DevExpress.XtraNavBar.NavBarItem();
             this.nbDataControl = new DevExpress.XtraNavBar.NavBarItem();
             this.nbOtherControl = new DevExpress.XtraNavBar.NavBarItem();
+            this.nbgModuleExercise = new DevExpress.XtraNavBar.NavBarGroup();
+            this.nbiWorkFlow = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // navBarControl1
             // 
-            this.navBarControl1.ActiveGroup = this.nbgControlShow;
+            this.navBarControl1.ActiveGroup = this.nbgModuleExercise;
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.nbgControlShow});
+            this.nbgControlShow,
+            this.nbgModuleExercise});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.nbShowControl,
             this.nbDataControl,
-            this.nbOtherControl});
+            this.nbOtherControl,
+            this.nbiWorkFlow});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 226;
@@ -58,7 +62,6 @@
             // nbgControlShow
             // 
             this.nbgControlShow.Caption = "重写控件演示";
-            this.nbgControlShow.Expanded = true;
             this.nbgControlShow.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbShowControl),
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbDataControl),
@@ -79,6 +82,19 @@
             // 
             this.nbOtherControl.Caption = "其他类";
             this.nbOtherControl.Name = "nbOtherControl";
+            // 
+            // nbgModuleExercise
+            // 
+            this.nbgModuleExercise.Caption = "模块实例";
+            this.nbgModuleExercise.Expanded = true;
+            this.nbgModuleExercise.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiWorkFlow)});
+            this.nbgModuleExercise.Name = "nbgModuleExercise";
+            // 
+            // nbiWorkFlow
+            // 
+            this.nbiWorkFlow.Caption = "流程图";
+            this.nbiWorkFlow.Name = "nbiWorkFlow";
             // 
             // frm_LeftMenu
             // 
@@ -102,5 +118,7 @@
         private DevExpress.XtraNavBar.NavBarItem nbShowControl;
         private DevExpress.XtraNavBar.NavBarItem nbDataControl;
         private DevExpress.XtraNavBar.NavBarItem nbOtherControl;
+        private DevExpress.XtraNavBar.NavBarGroup nbgModuleExercise;
+        private DevExpress.XtraNavBar.NavBarItem nbiWorkFlow;
     }
 }

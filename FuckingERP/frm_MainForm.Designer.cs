@@ -51,6 +51,7 @@
             this.Name = "frmFuckingERP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "手撕ERP系列";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmFuckingERP_Load);
             this.ResumeLayout(false);
 

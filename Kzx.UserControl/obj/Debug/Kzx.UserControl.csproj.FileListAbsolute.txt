@@ -108,4 +108,5 @@ E:\软件备份\FuckingERP_GIT\Kzx.UserControl\obj\Debug\Kzx.UserControl.csproj.
 E:\软件备份\FuckingERP_GIT\Kzx.UserControl\obj\Debug\Kzx.UserControl.dll
 E:\软件备份\FuckingERP_GIT\Kzx.UserControl\obj\Debug\Kzx.UserControl.pdb
 E:\软件备份\FuckingERP_GIT\Kzx.UserControl\obj\Debug\Kzx.UserControls.Status.resources
-E:\软件备份\FuckingERP_GIT\Kzx.UserControl\obj\Debug\Kzx.UserControls.frm_GridSetting.resources
+E:\软件备份\FuckingERP_GIT\Kzx.UserControl\obj\Debug\Kzx.UserControl.KzxLabel.resources
+E:\软件备份\FuckingERP_GIT\Kzx.UserControl\obj\Debug\Kzx.UserControl.KzxLine.resources

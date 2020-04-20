@@ -26,9 +26,6 @@ namespace FuckingERP
             leftMenu.Show(dockPanel1);
             leftMenu.DockState = WeifenLuo.WinFormsUI.Docking.DockState.DockLeft;
 
-            frmWorkFlow flowMenu = new frmWorkFlow();
-            flowMenu.Show(dockPanel1);
-            flowMenu.DockState = WeifenLuo.WinFormsUI.Docking.DockState.Document;
 
         }
     }

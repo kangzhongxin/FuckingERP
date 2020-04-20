@@ -285,6 +285,18 @@
     <Compile Include="KzxSimpleButton.Designer.cs">
       <DependentUpon>KzxSimpleButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="KzxLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KzxLabel.designer.cs">
+      <DependentUpon>KzxLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KzxLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KzxLine.designer.cs">
+      <DependentUpon>KzxLine.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FuckingERP\FuckingERP.csproj">
@@ -347,6 +359,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KzxTextBox.resx">
       <DependentUpon>KzxTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KzxLabel.resx">
+      <DependentUpon>KzxLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KzxLine.resx">
+      <DependentUpon>KzxLine.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -14,7 +14,7 @@ namespace FuckingERP
 {
     public partial class frm_LeftMenu : DockContent
     {
-        private static frm_LeftMenu fInstance; 
+        private static frm_LeftMenu fInstance;
         public frm_LeftMenu()
         {
             InitializeComponent();
@@ -60,11 +60,22 @@ namespace FuckingERP
             }
             else if (e.Link.ItemName == "nbDataControl")
             {
-
+               
             }
             else if (e.Link.ItemName == "nbOtherControl")
             {
 
+            }
+            else if (e.Link.ItemName == "nbiWorkFlow")
+            {
+                frmWorkFlow flowMenu = frmWorkFlow.GetInstance();
+                if (this.DockPanel.DocumentStyle == DocumentStyle.SystemMdi)
+                {
+                    flowMenu.MdiParent = this;
+                    flowMenu.Show();
+                }
+                else
+                    flowMenu.Show(this.DockPanel);
             }
         }
 
@@ -88,9 +99,9 @@ namespace FuckingERP
                 return null;
             }
         }
-        private frm_ShowControl CreateNewDocument(string sCaption="")
+        private frm_ShowControl CreateNewDocument(string sCaption = "")
         {
-            frm_ShowControl dummyDoc = frm_ShowControl.GetInstance(); 
+            frm_ShowControl dummyDoc = frm_ShowControl.GetInstance();
             int count = 1;
             string text = string.Empty;
             if (!string.IsNullOrEmpty(sCaption))
@@ -100,7 +111,7 @@ namespace FuckingERP
             else
             {
                 text = "Document" + count.ToString();
-            } 
+            }
             dummyDoc.Text = text;
             return dummyDoc;
         }
