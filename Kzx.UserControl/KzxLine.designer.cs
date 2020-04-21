@@ -34,9 +34,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Name = "KzxLine";
-            this.Size = new System.Drawing.Size(332, 36);
+            this.Size = new System.Drawing.Size(334, 38);
             this.ResumeLayout(false);
 
         }

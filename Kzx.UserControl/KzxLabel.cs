@@ -124,14 +124,7 @@ namespace Kzx.UserControl
                 this.CaptionControl.ForeColor = value;
             }
         }
-
-
-        private void YZLabel_Load(object sender, EventArgs e)
-        {
-            LayoutControl();
-            //UpdateDelegate d = LayoutControl;
-            //this.BeginInvoke(d);
-        }
+         
         public void LayoutControl()
         {
             BindingEvent(this, PluginInfoTable);
@@ -148,6 +141,13 @@ namespace Kzx.UserControl
         public override void BindingEvent(DataTable eventInfoTable)
         {
             BindingEvent(this, eventInfoTable);
+        }
+
+        private void KzxLabel_Load(object sender, EventArgs e)
+        {
+            LayoutControl();
+            //UpdateDelegate d = LayoutControl;
+            //this.BeginInvoke(d);
         }
     }
 }

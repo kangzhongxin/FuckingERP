@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWorkFlow));
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -106,21 +105,15 @@
             this.kzxPanel3 = new Kzx.UserControl.KzxPanel();
             this.kzxPanel5 = new Kzx.UserControl.KzxPanel();
             this.TabControl2 = new DevExpress.XtraTab.XtraTabControl();
+            this.kzxPanel6 = new Kzx.UserControl.KzxPanel();
+            this.kzxPanel4 = new Kzx.UserControl.KzxPanel();
+            this.sBtnDelete = new Kzx.UserControl.KzxSimpleButton();
+            this.Btn_Cancel = new Kzx.UserControl.KzxSimpleButton();
+            this.Btn_Post = new Kzx.UserControl.KzxSimpleButton();
+            this.Btn_Design = new Kzx.UserControl.KzxSimpleButton();
             this.panelControl1 = new Kzx.UserControl.KzxPanel();
             this.bar4 = new DevExpress.XtraBars.Bar();
             this.bar5 = new DevExpress.XtraBars.Bar();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar6 = new DevExpress.XtraBars.Bar();
-            this.Btn_Design = new DevExpress.XtraBars.BarButtonItem();
-            this.Btn_Post = new DevExpress.XtraBars.BarButtonItem();
-            this.Btn_Cancel = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.bar8 = new DevExpress.XtraBars.Bar();
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
             this.openDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.kzxPanel1)).BeginInit();
             this.kzxPanel1.SuspendLayout();
@@ -160,8 +153,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.kzxPanel5)).BeginInit();
             this.kzxPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kzxPanel6)).BeginInit();
+            this.kzxPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kzxPanel4)).BeginInit();
+            this.kzxPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // bar1
@@ -212,7 +208,7 @@
             this.kzxPanel1.DesigeCaption = "显示标题";
             this.kzxPanel1.DesigeEnabled = true;
             this.kzxPanel1.DesigeVisible = true;
-            this.kzxPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.kzxPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kzxPanel1.Key = "kzxPanel1";
             this.kzxPanel1.KzxBorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
             this.kzxPanel1.LayoutColumn = 0;
@@ -222,7 +218,7 @@
             this.kzxPanel1.Location = new System.Drawing.Point(2, 2);
             this.kzxPanel1.MessageCode = "0";
             this.kzxPanel1.Name = "kzxPanel1";
-            this.kzxPanel1.Size = new System.Drawing.Size(85, 535);
+            this.kzxPanel1.Size = new System.Drawing.Size(82, 550);
             this.kzxPanel1.TabIndex = 0;
             this.kzxPanel1.ToolTipMessageCode = "";
             this.kzxPanel1.ToolTipText = "";
@@ -245,7 +241,7 @@
             this.kzxsBtnAddButton.LayoutColumnSpan = 1;
             this.kzxsBtnAddButton.LayoutRow = 0;
             this.kzxsBtnAddButton.LayoutRowSpan = 1;
-            this.kzxsBtnAddButton.Location = new System.Drawing.Point(4, 153);
+            this.kzxsBtnAddButton.Location = new System.Drawing.Point(4, 143);
             this.kzxsBtnAddButton.MessageCode = "0";
             this.kzxsBtnAddButton.Name = "kzxsBtnAddButton";
             this.kzxsBtnAddButton.Size = new System.Drawing.Size(75, 60);
@@ -273,7 +269,7 @@
             this.kzxsBtnAddLabel.LayoutColumnSpan = 1;
             this.kzxsBtnAddLabel.LayoutRow = 0;
             this.kzxsBtnAddLabel.LayoutRowSpan = 1;
-            this.kzxsBtnAddLabel.Location = new System.Drawing.Point(4, 78);
+            this.kzxsBtnAddLabel.Location = new System.Drawing.Point(4, 68);
             this.kzxsBtnAddLabel.MessageCode = "0";
             this.kzxsBtnAddLabel.Name = "kzxsBtnAddLabel";
             this.kzxsBtnAddLabel.Size = new System.Drawing.Size(75, 60);
@@ -301,7 +297,7 @@
             this.kzxsBtnAddLine.LayoutColumnSpan = 1;
             this.kzxsBtnAddLine.LayoutRow = 0;
             this.kzxsBtnAddLine.LayoutRowSpan = 1;
-            this.kzxsBtnAddLine.Location = new System.Drawing.Point(4, 12);
+            this.kzxsBtnAddLine.Location = new System.Drawing.Point(4, 2);
             this.kzxsBtnAddLine.MessageCode = "0";
             this.kzxsBtnAddLine.Name = "kzxsBtnAddLine";
             this.kzxsBtnAddLine.Size = new System.Drawing.Size(75, 60);
@@ -324,10 +320,10 @@
             this.kzxPanel2.LayoutColumnSpan = 1;
             this.kzxPanel2.LayoutRow = 0;
             this.kzxPanel2.LayoutRowSpan = 1;
-            this.kzxPanel2.Location = new System.Drawing.Point(0, 586);
+            this.kzxPanel2.Location = new System.Drawing.Point(136, 609);
             this.kzxPanel2.MessageCode = "0";
             this.kzxPanel2.Name = "kzxPanel2";
-            this.kzxPanel2.Size = new System.Drawing.Size(1299, 128);
+            this.kzxPanel2.Size = new System.Drawing.Size(1163, 128);
             this.kzxPanel2.TabIndex = 2;
             this.kzxPanel2.ToolTipMessageCode = "";
             this.kzxPanel2.ToolTipText = "";
@@ -339,7 +335,7 @@
             this.TabControl1.Name = "TabControl1";
             this.TabControl1.PaintStyleName = "PropertyView";
             this.TabControl1.SelectedTabPage = this.TabPage1;
-            this.TabControl1.Size = new System.Drawing.Size(1295, 124);
+            this.TabControl1.Size = new System.Drawing.Size(1159, 124);
             this.TabControl1.TabIndex = 45;
             this.TabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabPage1,
@@ -369,7 +365,7 @@
             this.TabPage1.Controls.Add(this.labelControl1);
             this.TabPage1.Controls.Add(this.labelControl7);
             this.TabPage1.Name = "TabPage1";
-            this.TabPage1.Size = new System.Drawing.Size(1293, 102);
+            this.TabPage1.Size = new System.Drawing.Size(1157, 102);
             this.TabPage1.Text = "按钮";
             // 
             // Edt_FrmBtn
@@ -558,7 +554,7 @@
             this.TabPage2.Controls.Add(this.labelControl15);
             this.TabPage2.Controls.Add(this.labelControl16);
             this.TabPage2.Name = "TabPage2";
-            this.TabPage2.Size = new System.Drawing.Size(1293, 102);
+            this.TabPage2.Size = new System.Drawing.Size(1157, 102);
             this.TabPage2.Text = "Label";
             // 
             // edt_FrmLabel
@@ -802,11 +798,12 @@
             this.TabPage3.Controls.Add(this.edt_LeftLine);
             this.TabPage3.Controls.Add(this.labelControl20);
             this.TabPage3.Name = "TabPage3";
-            this.TabPage3.Size = new System.Drawing.Size(1293, 102);
+            this.TabPage3.Size = new System.Drawing.Size(1157, 102);
             this.TabPage3.Text = "直线";
             // 
             // chk_Horizon
             // 
+            this.chk_Horizon.EditValue = true;
             this.chk_Horizon.Location = new System.Drawing.Point(455, 43);
             this.chk_Horizon.Name = "chk_Horizon";
             this.chk_Horizon.Properties.Caption = "水平直线";
@@ -835,7 +832,7 @@
             this.cmb_LineWidth.Name = "cmb_LineWidth";
             this.cmb_LineWidth.Size = new System.Drawing.Size(100, 20);
             this.cmb_LineWidth.TabIndex = 96;
-            this.cmb_LineWidth.Text = "1";
+            this.cmb_LineWidth.Text = "3";
             // 
             // labelControl26
             // 
@@ -900,7 +897,7 @@
             // 
             // edt_HeightLine
             // 
-            this.edt_HeightLine.EditValue = "0";
+            this.edt_HeightLine.EditValue = "10";
             this.edt_HeightLine.Location = new System.Drawing.Point(158, 40);
             this.edt_HeightLine.Name = "edt_HeightLine";
             this.edt_HeightLine.Size = new System.Drawing.Size(50, 20);
@@ -916,7 +913,7 @@
             // 
             // edt_TopLine
             // 
-            this.edt_TopLine.EditValue = "0";
+            this.edt_TopLine.EditValue = "10";
             this.edt_TopLine.Location = new System.Drawing.Point(67, 40);
             this.edt_TopLine.Name = "edt_TopLine";
             this.edt_TopLine.Size = new System.Drawing.Size(50, 20);
@@ -924,7 +921,7 @@
             // 
             // edt_WidthLine
             // 
-            this.edt_WidthLine.EditValue = "0";
+            this.edt_WidthLine.EditValue = "100";
             this.edt_WidthLine.Location = new System.Drawing.Point(157, 10);
             this.edt_WidthLine.Name = "edt_WidthLine";
             this.edt_WidthLine.Size = new System.Drawing.Size(50, 20);
@@ -948,7 +945,7 @@
             // 
             // edt_LeftLine
             // 
-            this.edt_LeftLine.EditValue = "0";
+            this.edt_LeftLine.EditValue = "10";
             this.edt_LeftLine.Location = new System.Drawing.Point(66, 10);
             this.edt_LeftLine.Name = "edt_LeftLine";
             this.edt_LeftLine.Size = new System.Drawing.Size(50, 20);
@@ -965,8 +962,8 @@
             // kzxPanel3
             // 
             this.kzxPanel3.Controls.Add(this.kzxPanel5);
-            this.kzxPanel3.Controls.Add(this.panelControl1);
-            this.kzxPanel3.Controls.Add(this.kzxPanel1);
+            this.kzxPanel3.Controls.Add(this.kzxPanel6);
+            this.kzxPanel3.Controls.Add(this.kzxPanel4);
             this.kzxPanel3.DesigeCaption = "显示标题";
             this.kzxPanel3.DesigeEnabled = true;
             this.kzxPanel3.DesigeVisible = true;
@@ -977,10 +974,10 @@
             this.kzxPanel3.LayoutColumnSpan = 1;
             this.kzxPanel3.LayoutRow = 0;
             this.kzxPanel3.LayoutRowSpan = 1;
-            this.kzxPanel3.Location = new System.Drawing.Point(0, 47);
+            this.kzxPanel3.Location = new System.Drawing.Point(136, 0);
             this.kzxPanel3.MessageCode = "0";
             this.kzxPanel3.Name = "kzxPanel3";
-            this.kzxPanel3.Size = new System.Drawing.Size(1299, 539);
+            this.kzxPanel3.Size = new System.Drawing.Size(1163, 609);
             this.kzxPanel3.TabIndex = 3;
             this.kzxPanel3.ToolTipMessageCode = "";
             this.kzxPanel3.ToolTipText = "";
@@ -998,11 +995,11 @@
             this.kzxPanel5.LayoutColumnSpan = 1;
             this.kzxPanel5.LayoutRow = 0;
             this.kzxPanel5.LayoutRowSpan = 1;
-            this.kzxPanel5.Location = new System.Drawing.Point(223, 2);
+            this.kzxPanel5.Location = new System.Drawing.Point(88, 53);
             this.kzxPanel5.MessageCode = "0";
             this.kzxPanel5.Name = "kzxPanel5";
-            this.kzxPanel5.Size = new System.Drawing.Size(1074, 535);
-            this.kzxPanel5.TabIndex = 10;
+            this.kzxPanel5.Size = new System.Drawing.Size(1073, 554);
+            this.kzxPanel5.TabIndex = 12;
             this.kzxPanel5.ToolTipMessageCode = "";
             this.kzxPanel5.ToolTipText = "";
             // 
@@ -1012,8 +1009,165 @@
             this.TabControl2.Location = new System.Drawing.Point(2, 2);
             this.TabControl2.Name = "TabControl2";
             this.TabControl2.PaintStyleName = "PropertyView";
-            this.TabControl2.Size = new System.Drawing.Size(1070, 531);
+            this.TabControl2.Size = new System.Drawing.Size(1069, 550);
             this.TabControl2.TabIndex = 8;
+            // 
+            // kzxPanel6
+            // 
+            this.kzxPanel6.Controls.Add(this.kzxPanel1);
+            this.kzxPanel6.DesigeCaption = "显示标题";
+            this.kzxPanel6.DesigeEnabled = true;
+            this.kzxPanel6.DesigeVisible = true;
+            this.kzxPanel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.kzxPanel6.Key = "kzxPanel6";
+            this.kzxPanel6.KzxBorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+            this.kzxPanel6.LayoutColumn = 0;
+            this.kzxPanel6.LayoutColumnSpan = 1;
+            this.kzxPanel6.LayoutRow = 0;
+            this.kzxPanel6.LayoutRowSpan = 1;
+            this.kzxPanel6.Location = new System.Drawing.Point(2, 53);
+            this.kzxPanel6.MessageCode = "0";
+            this.kzxPanel6.Name = "kzxPanel6";
+            this.kzxPanel6.Size = new System.Drawing.Size(86, 554);
+            this.kzxPanel6.TabIndex = 14;
+            this.kzxPanel6.ToolTipMessageCode = "";
+            this.kzxPanel6.ToolTipText = "";
+            // 
+            // kzxPanel4
+            // 
+            this.kzxPanel4.Controls.Add(this.sBtnDelete);
+            this.kzxPanel4.Controls.Add(this.Btn_Cancel);
+            this.kzxPanel4.Controls.Add(this.Btn_Post);
+            this.kzxPanel4.Controls.Add(this.Btn_Design);
+            this.kzxPanel4.DesigeCaption = "显示标题";
+            this.kzxPanel4.DesigeEnabled = true;
+            this.kzxPanel4.DesigeVisible = true;
+            this.kzxPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kzxPanel4.Key = "kzxPanel4";
+            this.kzxPanel4.KzxBorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+            this.kzxPanel4.LayoutColumn = 0;
+            this.kzxPanel4.LayoutColumnSpan = 1;
+            this.kzxPanel4.LayoutRow = 0;
+            this.kzxPanel4.LayoutRowSpan = 1;
+            this.kzxPanel4.Location = new System.Drawing.Point(2, 2);
+            this.kzxPanel4.MessageCode = "0";
+            this.kzxPanel4.Name = "kzxPanel4";
+            this.kzxPanel4.Size = new System.Drawing.Size(1159, 51);
+            this.kzxPanel4.TabIndex = 13;
+            this.kzxPanel4.ToolTipMessageCode = "";
+            this.kzxPanel4.ToolTipText = "";
+            // 
+            // sBtnDelete
+            // 
+            this.sBtnDelete.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.sBtnDelete.DesigeCaption = "删除";
+            this.sBtnDelete.DesigeEnabled = true;
+            this.sBtnDelete.DesigeVisible = true;
+            this.sBtnDelete.DllName = "";
+            this.sBtnDelete.Image = ((System.Drawing.Image)(resources.GetObject("sBtnDelete.Image")));
+            this.sBtnDelete.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.sBtnDelete.Key = "kzxSimpleButton1";
+            this.sBtnDelete.KzxButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.sBtnDelete.KzxImage = ((System.Drawing.Image)(resources.GetObject("sBtnDelete.KzxImage")));
+            this.sBtnDelete.KzxImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.sBtnDelete.LabelForeColor = System.Drawing.Color.Empty;
+            this.sBtnDelete.LayoutColumn = 0;
+            this.sBtnDelete.LayoutColumnSpan = 1;
+            this.sBtnDelete.LayoutRow = 0;
+            this.sBtnDelete.LayoutRowSpan = 1;
+            this.sBtnDelete.Location = new System.Drawing.Point(270, 4);
+            this.sBtnDelete.MessageCode = "0";
+            this.sBtnDelete.Name = "sBtnDelete";
+            this.sBtnDelete.Size = new System.Drawing.Size(83, 41);
+            this.sBtnDelete.TabIndex = 0;
+            this.sBtnDelete.Text = "删除";
+            this.sBtnDelete.ToolTipMessageCode = "";
+            this.sBtnDelete.ToolTipText = "";
+            this.sBtnDelete.Click += new System.EventHandler(this.sBtnDelete_Click);
+            // 
+            // Btn_Cancel
+            // 
+            this.Btn_Cancel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.Btn_Cancel.DesigeCaption = "取消";
+            this.Btn_Cancel.DesigeEnabled = true;
+            this.Btn_Cancel.DesigeVisible = true;
+            this.Btn_Cancel.DllName = "";
+            this.Btn_Cancel.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cancel.Image")));
+            this.Btn_Cancel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.Btn_Cancel.Key = "kzxSimpleButton1";
+            this.Btn_Cancel.KzxButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.Btn_Cancel.KzxImage = ((System.Drawing.Image)(resources.GetObject("Btn_Cancel.KzxImage")));
+            this.Btn_Cancel.KzxImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.Btn_Cancel.LabelForeColor = System.Drawing.Color.Empty;
+            this.Btn_Cancel.LayoutColumn = 0;
+            this.Btn_Cancel.LayoutColumnSpan = 1;
+            this.Btn_Cancel.LayoutRow = 0;
+            this.Btn_Cancel.LayoutRowSpan = 1;
+            this.Btn_Cancel.Location = new System.Drawing.Point(181, 5);
+            this.Btn_Cancel.MessageCode = "0";
+            this.Btn_Cancel.Name = "Btn_Cancel";
+            this.Btn_Cancel.Size = new System.Drawing.Size(83, 41);
+            this.Btn_Cancel.TabIndex = 0;
+            this.Btn_Cancel.Text = "取消";
+            this.Btn_Cancel.ToolTipMessageCode = "";
+            this.Btn_Cancel.ToolTipText = "";
+            this.Btn_Cancel.Click += new System.EventHandler(this.Btn_Cancel_Click);
+            // 
+            // Btn_Post
+            // 
+            this.Btn_Post.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.Btn_Post.DesigeCaption = "保存";
+            this.Btn_Post.DesigeEnabled = true;
+            this.Btn_Post.DesigeVisible = true;
+            this.Btn_Post.DllName = "";
+            this.Btn_Post.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Post.Image")));
+            this.Btn_Post.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.Btn_Post.Key = "kzxSimpleButton1";
+            this.Btn_Post.KzxButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.Btn_Post.KzxImage = ((System.Drawing.Image)(resources.GetObject("Btn_Post.KzxImage")));
+            this.Btn_Post.KzxImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.Btn_Post.LabelForeColor = System.Drawing.Color.Empty;
+            this.Btn_Post.LayoutColumn = 0;
+            this.Btn_Post.LayoutColumnSpan = 1;
+            this.Btn_Post.LayoutRow = 0;
+            this.Btn_Post.LayoutRowSpan = 1;
+            this.Btn_Post.Location = new System.Drawing.Point(92, 5);
+            this.Btn_Post.MessageCode = "0";
+            this.Btn_Post.Name = "Btn_Post";
+            this.Btn_Post.Size = new System.Drawing.Size(83, 41);
+            this.Btn_Post.TabIndex = 0;
+            this.Btn_Post.Text = "保存";
+            this.Btn_Post.ToolTipMessageCode = "";
+            this.Btn_Post.ToolTipText = "";
+            this.Btn_Post.Click += new System.EventHandler(this.Btn_Post_Click);
+            // 
+            // Btn_Design
+            // 
+            this.Btn_Design.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.Btn_Design.DesigeCaption = "设计";
+            this.Btn_Design.DesigeEnabled = true;
+            this.Btn_Design.DesigeVisible = true;
+            this.Btn_Design.DllName = "";
+            this.Btn_Design.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Design.Image")));
+            this.Btn_Design.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.Btn_Design.Key = "kzxSimpleButton1";
+            this.Btn_Design.KzxButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.Btn_Design.KzxImage = ((System.Drawing.Image)(resources.GetObject("Btn_Design.KzxImage")));
+            this.Btn_Design.KzxImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.Btn_Design.LabelForeColor = System.Drawing.Color.Empty;
+            this.Btn_Design.LayoutColumn = 0;
+            this.Btn_Design.LayoutColumnSpan = 1;
+            this.Btn_Design.LayoutRow = 0;
+            this.Btn_Design.LayoutRowSpan = 1;
+            this.Btn_Design.Location = new System.Drawing.Point(3, 2);
+            this.Btn_Design.MessageCode = "0";
+            this.Btn_Design.Name = "Btn_Design";
+            this.Btn_Design.Size = new System.Drawing.Size(83, 44);
+            this.Btn_Design.TabIndex = 0;
+            this.Btn_Design.Text = "设计";
+            this.Btn_Design.ToolTipMessageCode = "";
+            this.Btn_Design.ToolTipText = "";
+            this.Btn_Design.Click += new System.EventHandler(this.Btn_Design_Click);
             // 
             // panelControl1
             // 
@@ -1027,10 +1181,10 @@
             this.panelControl1.LayoutColumnSpan = 1;
             this.panelControl1.LayoutRow = 0;
             this.panelControl1.LayoutRowSpan = 1;
-            this.panelControl1.Location = new System.Drawing.Point(87, 2);
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.MessageCode = "0";
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(136, 535);
+            this.panelControl1.Size = new System.Drawing.Size(136, 737);
             this.panelControl1.TabIndex = 9;
             this.panelControl1.ToolTipMessageCode = "";
             this.panelControl1.ToolTipText = "";
@@ -1052,119 +1206,6 @@
             this.bar5.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar5.Text = "Tools";
             // 
-            // barManager1
-            // 
-            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar6,
-            this.bar8});
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.Btn_Design,
-            this.Btn_Post,
-            this.Btn_Cancel,
-            this.barCheckItem1,
-            this.barButtonItem1});
-            this.barManager1.MaxItemId = 5;
-            this.barManager1.StatusBar = this.bar8;
-            // 
-            // bar6
-            // 
-            this.bar6.BarName = "Tools";
-            this.bar6.DockCol = 0;
-            this.bar6.DockRow = 0;
-            this.bar6.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar6.FloatLocation = new System.Drawing.Point(86, 138);
-            this.bar6.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Btn_Design, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Btn_Post, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Btn_Cancel, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.bar6.Offset = 2;
-            this.bar6.Text = "Tools";
-            // 
-            // Btn_Design
-            // 
-            this.Btn_Design.Caption = "设计";
-            this.Btn_Design.Glyph = ((System.Drawing.Image)(resources.GetObject("Btn_Design.Glyph")));
-            this.Btn_Design.Id = 0;
-            this.Btn_Design.Name = "Btn_Design";
-            this.Btn_Design.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Design_ItemClick);
-            // 
-            // Btn_Post
-            // 
-            this.Btn_Post.Caption = "保存";
-            this.Btn_Post.Glyph = ((System.Drawing.Image)(resources.GetObject("Btn_Post.Glyph")));
-            this.Btn_Post.Id = 1;
-            this.Btn_Post.Name = "Btn_Post";
-            this.Btn_Post.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Post_ItemClick);
-            // 
-            // Btn_Cancel
-            // 
-            this.Btn_Cancel.Caption = "取消";
-            this.Btn_Cancel.Glyph = ((System.Drawing.Image)(resources.GetObject("Btn_Cancel.Glyph")));
-            this.Btn_Cancel.Id = 2;
-            this.Btn_Cancel.Name = "Btn_Cancel";
-            this.Btn_Cancel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Cancel_ItemClick);
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "删除";
-            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
-            this.barButtonItem1.Id = 4;
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
-            // 
-            // bar8
-            // 
-            this.bar8.BarName = "Status bar";
-            this.bar8.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar8.DockCol = 0;
-            this.bar8.DockRow = 0;
-            this.bar8.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar8.OptionsBar.AllowQuickCustomization = false;
-            this.bar8.OptionsBar.DrawDragBorder = false;
-            this.bar8.OptionsBar.UseWholeRow = true;
-            this.bar8.Text = "Status bar";
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1299, 47);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 714);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1299, 23);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 47);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 667);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1299, 47);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 667);
-            // 
-            // barCheckItem1
-            // 
-            this.barCheckItem1.Caption = "barCheckItem1";
-            this.barCheckItem1.Enabled = false;
-            this.barCheckItem1.Id = 3;
-            this.barCheckItem1.Name = "barCheckItem1";
-            // 
             // openDialog1
             // 
             this.openDialog1.FileName = "openFileDialog1";
@@ -1176,10 +1217,7 @@
             this.ClientSize = new System.Drawing.Size(1299, 737);
             this.Controls.Add(this.kzxPanel3);
             this.Controls.Add(this.kzxPanel2);
-            this.Controls.Add(this.barDockControlLeft);
-            this.Controls.Add(this.barDockControlRight);
-            this.Controls.Add(this.barDockControlBottom);
-            this.Controls.Add(this.barDockControlTop);
+            this.Controls.Add(this.panelControl1);
             this.Name = "frmWorkFlow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "流程图";
@@ -1227,8 +1265,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.kzxPanel5)).EndInit();
             this.kzxPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kzxPanel6)).EndInit();
+            this.kzxPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kzxPanel4)).EndInit();
+            this.kzxPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1312,20 +1353,14 @@
         private DevExpress.XtraTab.XtraTabControl TabControl2;
         private DevExpress.XtraBars.Bar bar4;
         private DevExpress.XtraBars.Bar bar5;
-        private DevExpress.XtraBars.BarManager barManager1;
-        private DevExpress.XtraBars.Bar bar6;
-        private DevExpress.XtraBars.BarButtonItem Btn_Design;
-        private DevExpress.XtraBars.BarButtonItem Btn_Post;
-        private DevExpress.XtraBars.BarButtonItem Btn_Cancel;
-        private DevExpress.XtraBars.Bar bar8;
-        private DevExpress.XtraBars.BarDockControl barDockControlTop;
-        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
-        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
-        private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem1;
         private System.Windows.Forms.OpenFileDialog openDialog1;
-        private Kzx.UserControl.KzxPanel kzxPanel5;
         private Kzx.UserControl.KzxPanel panelControl1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private Kzx.UserControl.KzxPanel kzxPanel5;
+        private Kzx.UserControl.KzxPanel kzxPanel6;
+        private Kzx.UserControl.KzxPanel kzxPanel4;
+        private Kzx.UserControl.KzxSimpleButton Btn_Design;
+        private Kzx.UserControl.KzxSimpleButton Btn_Post;
+        private Kzx.UserControl.KzxSimpleButton Btn_Cancel;
+        private Kzx.UserControl.KzxSimpleButton sBtnDelete;
     }
 }

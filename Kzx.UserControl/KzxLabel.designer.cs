@@ -46,7 +46,7 @@
             this.Controls.Add(this.CaptionControl);
             this.Name = "KzxLabel";
             this.Size = new System.Drawing.Size(70, 21);
-            this.Load += new System.EventHandler(this.YZLabel_Load);
+            this.Load += new System.EventHandler(this.KzxLabel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
