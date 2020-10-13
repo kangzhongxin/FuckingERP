@@ -196,6 +196,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BillInfo.cs" />
+    <Compile Include="frm_GDIPlus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GDIPlus.Designer.cs">
+      <DependentUpon>frm_GDIPlus.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_LeftMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     <Compile Include="重写控件-弹窗类\frm_ShowControl.Designer.cs">
       <DependentUpon>frm_ShowControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frm_GDIPlus.resx">
+      <DependentUpon>frm_GDIPlus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_LeftMenu.resx">
       <DependentUpon>frm_LeftMenu.cs</DependentUpon>
     </EmbeddedResource>

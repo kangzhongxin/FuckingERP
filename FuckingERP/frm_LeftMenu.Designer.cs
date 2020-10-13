@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
+            this.nbgModuleExercise = new DevExpress.XtraNavBar.NavBarGroup();
+            this.nbiWorkFlow = new DevExpress.XtraNavBar.NavBarItem();
             this.nbgControlShow = new DevExpress.XtraNavBar.NavBarGroup();
             this.nbShowControl = new DevExpress.XtraNavBar.NavBarItem();
             this.nbDataControl = new DevExpress.XtraNavBar.NavBarItem();
             this.nbOtherControl = new DevExpress.XtraNavBar.NavBarItem();
-            this.nbgModuleExercise = new DevExpress.XtraNavBar.NavBarGroup();
-            this.nbiWorkFlow = new DevExpress.XtraNavBar.NavBarItem();
+            this.nbiGDIPlus = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,15 +50,30 @@
             this.nbShowControl,
             this.nbDataControl,
             this.nbOtherControl,
-            this.nbiWorkFlow});
+            this.nbiWorkFlow,
+            this.nbiGDIPlus});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 226;
             this.navBarControl1.Size = new System.Drawing.Size(226, 450);
+            this.navBarControl1.StoreDefaultPaintStyleName = true;
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
-            this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinNavigationPaneViewInfoRegistrator("DevExpress Design");
             this.navBarControl1.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarControl1_LinkClicked);
+            // 
+            // nbgModuleExercise
+            // 
+            this.nbgModuleExercise.Caption = "模块实例";
+            this.nbgModuleExercise.Expanded = true;
+            this.nbgModuleExercise.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiGDIPlus),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiWorkFlow)});
+            this.nbgModuleExercise.Name = "nbgModuleExercise";
+            // 
+            // nbiWorkFlow
+            // 
+            this.nbiWorkFlow.Caption = "流程图";
+            this.nbiWorkFlow.Name = "nbiWorkFlow";
             // 
             // nbgControlShow
             // 
@@ -83,18 +99,10 @@
             this.nbOtherControl.Caption = "其他类";
             this.nbOtherControl.Name = "nbOtherControl";
             // 
-            // nbgModuleExercise
+            // nbiGDIPlus
             // 
-            this.nbgModuleExercise.Caption = "模块实例";
-            this.nbgModuleExercise.Expanded = true;
-            this.nbgModuleExercise.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiWorkFlow)});
-            this.nbgModuleExercise.Name = "nbgModuleExercise";
-            // 
-            // nbiWorkFlow
-            // 
-            this.nbiWorkFlow.Caption = "流程图";
-            this.nbiWorkFlow.Name = "nbiWorkFlow";
+            this.nbiGDIPlus.Caption = "GDI+绘图";
+            this.nbiGDIPlus.Name = "nbiGDIPlus";
             // 
             // frm_LeftMenu
             // 
@@ -120,5 +128,6 @@
         private DevExpress.XtraNavBar.NavBarItem nbOtherControl;
         private DevExpress.XtraNavBar.NavBarGroup nbgModuleExercise;
         private DevExpress.XtraNavBar.NavBarItem nbiWorkFlow;
+        private DevExpress.XtraNavBar.NavBarItem nbiGDIPlus;
     }
 }

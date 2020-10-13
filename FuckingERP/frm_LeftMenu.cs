@@ -58,17 +58,32 @@ namespace FuckingERP
                 else
                     dummyDoc.Show(this.DockPanel);
             }
+            //容器类
             else if (e.Link.ItemName == "nbDataControl")
             {
                
             }
+            //其他类
             else if (e.Link.ItemName == "nbOtherControl")
             {
 
             }
+            //流程图
             else if (e.Link.ItemName == "nbiWorkFlow")
             {
                 frmWorkFlow flowMenu = frmWorkFlow.GetInstance();
+                if (this.DockPanel.DocumentStyle == DocumentStyle.SystemMdi)
+                {
+                    flowMenu.MdiParent = this;
+                    flowMenu.Show();
+                }
+                else
+                    flowMenu.Show(this.DockPanel);
+            }
+            //GDI+绘图
+            else if (e.Link.ItemName == "nbiGDIPlus")
+            {
+                frm_GDIPlus flowMenu = frm_GDIPlus.GetInstance();
                 if (this.DockPanel.DocumentStyle == DocumentStyle.SystemMdi)
                 {
                     flowMenu.MdiParent = this;
